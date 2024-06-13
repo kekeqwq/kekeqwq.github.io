@@ -1,0 +1,41 @@
+#+title: use lute v3
+#+date: <2024-06-13 19:48>
+#+description: 
+#+filetags: tutorial
+
+* Install lute
+** Useing venv
+Create a folder and enter it to create a Python virtual environment.
+#+begin_src shell
+  python -m venv envlute
+#+end_src
+Execute the activation script in the ~envlute\Scripts~ folder according to the shell currently in use.
+** Install via pip
+#+begin_src shell
+  pip install lute3
+#+end_src
+** Starting in a virtual environment
+#+begin_src shell
+  python -m lute.main
+#+end_src
+* Use lute
+** Update
+#+begin_src shell
+  pip install --upgrade lute3
+#+end_src
+** Config
+*** Dicts
+| Name      | type  | Url                                                                                                                  |
+| collins   | en-zh | https://www.collinsdictionary.com/dictionary/english-chinese/###                                                     |
+| cambridge | en-zh | https://dictionary.cambridge.org/zhs/%E8%AF%8D%E5%85%B8/%E8%8B%B1%E8%AF%AD-%E6%B1%89%E8%AF%AD-%E7%AE%80%E4%BD%93/### |
+| bing      | en-zh | https://www.bing.com/dict/###                                                                                        |
+*** Custom styles
+#+begin_src css
+  /* Custom css to modify Lute's appearance. */
+  body {
+    font-family: "IBM Plex Serif", serif;
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/ibmplexserif/v19/jizAREVNn1dOx-zrZ2X3pZvkTi2k_iI5q1vxiQ.woff2) format('woff2');
+  }
+#+end_src

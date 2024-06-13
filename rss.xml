@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title><![CDATA[K]]></title>
+<description><![CDATA[K]]></description>
+<link></link>
+<lastBuildDate>Thu, 13 Jun 2024 20:23:52 +0800</lastBuildDate>
+<item>
+  <title><![CDATA[archlinux with bcachefs efibootmgr]]></title>
+  <description><![CDATA[
+<div id="outline-container-orgc4c1175" class="outline-2">
+<h2 id="orgc4c1175"><span class="todo TODO">TODO</span> Need collate</h2>
+<div class="outline-text-2" id="text-orgc4c1175">
+<div class="org-src-container">
+<pre class="src src-shell">100m esp for /boot/efi
+bcachefs format --fs_label=ArchLinux --compression=zstd /dev/sda2
+mkfs.fat -F32 /dev/sda1
+pacstrap -K /mnt base linux bcachefs-tools neovim btrfs-progs efibootmgr
+genfstab -U /mnt &gt;&gt; /mnt/etc/fstab
+arch-chroot /mnt
+ln -sf /usr/share/zoneinfo/Region/City /etc/localtime
+hwclock --systohc
+Uncomment en_US.UTF-8 UTF-8 in /etc/locale.gen, then
+locale-gen
+echo "LANG=en_US.UTF-8" &gt; /etc/locale.conf
+echo "archlinux" &gt; /etc/hostname
+
+(chroot) # exit
+# ln -sf /run/systemd/resolve/stub-resolv.conf /mnt/etc/resolv.conf
+# arch-chroot /mnt
+
+/etc/systemd/network/20-ethernet.network
+[Match]
+Name=en*
+Name=eth*
+
+[Network]
+DHCP=yes
+
+Enable systemd-resolved.service and systemd-networkd.service.
+
+/etc/kernel/cmdline
+root=UUID=ROOT_UUID nvidia-drm.modeset=1
+/etc/mkinitcpio.d/linux.preset
+Edit default_uki= and fallback_uki= to create UKI under path /boot/efi
+
+efibootmgr --create --disk /dev/sda --part 1 --label "archlinux" --loader '1.efi'
+efibootmgr --bootorder 0003,0004,0005
+efibootmgr -b 0004 -B
+systemctl enable --now systemd-homed
+homectl create keke --member-of=wheel --shell=/bin/fish --storage=luks --fs-type=btrfs
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8ded9d6" class="outline-2">
+<h2 id="org8ded9d6">Install Nvidia-open</h2>
+<div class="outline-text-2" id="text-org8ded9d6">
+<p>
+ref. <a href="https://linuxiac.com/nvidia-with-wayland-on-arch-setup-guide/">https://linuxiac.com/nvidia-with-wayland-on-arch-setup-guide/</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org13c9250" class="outline-2">
+<h2 id="org13c9250"><span class="todo TODO">TODO</span> Wayfire need fix</h2>
+<div class="outline-text-2" id="text-org13c9250">
+<p>
+use <a href="https://www.archlinuxcn.org/archlinux-cn-repo-and-mirror/">https://www.archlinuxcn.org/archlinux-cn-repo-and-mirror/</a>
+then <code>sudo pacman -S wayfire-lily-git</code>
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">II 02-06-24 19:09:58.955 - [build/wayfire/src/main.cpp:395] Starting wayfire version 0.9.0
+II 02-06-24 19:09:58.956 - [libseat] [libseat/libseat.c:73] Seat opened with backend 'seatd'
+II 02-06-24 19:09:58.956 - [libseat] [libseat/backend/seatd.c:212] Enabling seat
+II 02-06-24 19:09:58.956 - [backend/session/session.c:109] Successfully loaded libseat session
+II 02-06-24 19:09:58.959 - [backend/backend.c:213] Found 1 GPUs
+II 02-06-24 19:09:58.959 - [backend/drm/backend.c:202] Initializing DRM backend for /dev/dri/card0 (nvidia-drm)
+II 02-06-24 19:09:58.959 - [backend/drm/drm.c:259] Found 4 DRM CRTCs
+II 02-06-24 19:09:58.959 - [backend/drm/drm.c:217] Found 12 DRM planes
+II 02-06-24 19:09:58.972 - [render/egl.c:206] Supported EGL client extensions: EGL_EXT_platform_base EGL_EXT_device_base EGL_EXT_device_enumeration EGL_EXT_device_query EGL_KHR_client_get_all_proc_addresses EGL_EXT_client_extensions EGL_KHR_debug EGL_KHR_platform_x11 EGL_EXT_platform_x11 EGL_EXT_platform_device EGL_MESA_platform_surfaceless EGL_EXT_explicit_device EGL_KHR_platform_wayland EGL_EXT_platform_wayland EGL_KHR_platform_gbm EGL_MESA_platform_gbm EGL_EXT_platform_xcb
+II 02-06-24 19:09:58.979 - [render/egl.c:355] Using EGL 1.5
+II 02-06-24 19:09:58.979 - [render/egl.c:356] Supported EGL display extensions: EGL_ANDROID_native_fence_sync EGL_EXT_buffer_age EGL_EXT_client_sync EGL_EXT_create_context_robustness EGL_EXT_image_dma_buf_import EGL_EXT_image_dma_buf_import_modifiers EGL_MESA_image_dma_buf_export EGL_EXT_output_base EGL_EXT_output_drm EGL_EXT_protected_content EGL_EXT_stream_consumer_egloutput EGL_EXT_stream_acquire_mode EGL_EXT_sync_reuse EGL_IMG_context_priority EGL_KHR_config_attribs EGL_KHR_create_context_no_error EGL_KHR_context_flush_control EGL_KHR_create_context EGL_KHR_fence_sync EGL_KHR_get_all_proc_addresses EGL_KHR_partial_update EGL_KHR_swap_buffers_with_damage EGL_KHR_no_config_context EGL_KHR_gl_colorspace EGL_KHR_gl_renderbuffer_image EGL_KHR_gl_texture_2D_image EGL_KHR_gl_texture_3D_image EGL_KHR_gl_texture_cubemap_image EGL_KHR_image EGL_KHR_image_base EGL_KHR_reusable_sync EGL_KHR_stream EGL_KHR_stream_attrib EGL_KHR_stream_consumer_gltexture EGL_KHR_stream_cross_process_fd EGL_KHR_stream_fifo EGL_KHR_stream_producer_eglsurface EGL_KHR_surfaceless_context EGL_KHR_wait_sync EGL_NV_nvrm_fence_sync EGL_NV_quadruple_buffer EGL_NV_stream_consumer_eglimage EGL_NV_stream_cross_display EGL_NV_stream_cross_object EGL_NV_stream_cross_process EGL_NV_stream_cross_system EGL_NV_stream_dma EGL_NV_stream_flush EGL_NV_stream_metadata EGL_NV_stream_remote EGL_NV_stream_reset EGL_NV_stream_socket EGL_NV_stream_socket_inet EGL_NV_stream_socket_unix EGL_NV_stream_sync EGL_NV_stream_fifo_next EGL_NV_stream_fifo_synchronous EGL_NV_stream_consumer_gltexture_yuv EGL_NV_stream_attrib EGL_NV_stream_origin EGL_NV_system_time EGL_NV_output_drm_flip_event EGL_NV_triple_buffer EGL_NV_robustness_video_memory_purge EGL_EXT_present_opaque EGL_WL_bind_wayland_display EGL_WL_wayland_eglstream
+II 02-06-24 19:09:58.979 - [render/egl.c:358] Supported EGL device extensions: EGL_NV_device_cuda EGL_EXT_device_drm EGL_EXT_device_drm_render_node EGL_EXT_device_query_name EGL_EXT_device_persistent_id
+II 02-06-24 19:09:58.979 - [render/egl.c:360] EGL vendor: NVIDIA
+II 02-06-24 19:09:58.979 - [render/egl.c:362] EGL driver name: nvidia
+EE 02-06-24 19:09:58.979 - [EGL] command: eglQueryDmaBufModifiersEXT, error: EGL_BAD_PARAMETER (0x300c), message: "EGL_BAD_PARAMETER error: In eglQueryDmaBufModifiersEXT: Invalid format
+"
+EE 02-06-24 19:09:58.979 - [render/egl.c:856] Failed to query dmabuf number of modifiers
+EE 02-06-24 19:09:58.979 - [EGL] command: eglQueryDmaBufModifiersEXT, error: EGL_BAD_PARAMETER (0x300c), message: "EGL_BAD_PARAMETER error: In eglQueryDmaBufModifiersEXT: Invalid format
+"
+EE 02-06-24 19:09:58.979 - [render/egl.c:856] Failed to query dmabuf number of modifiers
+II 02-06-24 19:09:59.013 - [render/gles2/renderer.c:842] Creating GLES2 renderer
+II 02-06-24 19:09:59.013 - [render/gles2/renderer.c:843] Using OpenGL ES 3.2 NVIDIA 550.78
+II 02-06-24 19:09:59.013 - [render/gles2/renderer.c:844] GL vendor: NVIDIA Corporation
+II 02-06-24 19:09:59.013 - [render/gles2/renderer.c:845] GL renderer: NVIDIA GeForce RTX 2060/PCIe/SSE2
+II 02-06-24 19:09:59.013 - [render/gles2/renderer.c:846] Supported GLES2 extensions: GL_EXT_base_instance GL_EXT_blend_func_extended GL_EXT_blend_minmax GL_EXT_buffer_storage GL_EXT_clear_texture GL_EXT_clip_control GL_EXT_clip_cull_distance GL_EXT_color_buffer_float GL_EXT_color_buffer_half_float GL_EXT_conservative_depth GL_EXT_copy_image GL_EXT_depth_clamp GL_EXT_debug_label GL_EXT_discard_framebuffer GL_EXT_disjoint_timer_query GL_EXT_draw_buffers_indexed GL_EXT_draw_elements_base_vertex GL_EXT_EGL_image_array GL_EXT_EGL_image_storage GL_EXT_EGL_image_external_wrap_modes GL_EXT_float_blend GL_EXT_frag_depth GL_EXT_geometry_point_size GL_EXT_geometry_shader GL_EXT_gpu_shader5 GL_EXT_map_buffer_range GL_EXT_multi_draw_indirect GL_EXT_multisample_compatibility GL_EXT_multisampled_render_to_texture GL_EXT_multisampled_render_to_texture2 GL_EXT_multiview_texture_multisample GL_EXT_multiview_timer_query GL_EXT_occlusion_query_boolean GL_EXT_polygon_offset_clamp GL_EXT_post_depth_coverage GL_EXT_primitive_bounding_box GL_EXT_raster_multisample GL_EXT_render_snorm GL_EXT_robustness GL_EXT_separate_shader_objects GL_EXT_shader_group_vote GL_EXT_shader_implicit_conversions GL_EXT_shader_integer_mix GL_EXT_shader_io_blocks GL_EXT_shader_non_constant_global_initializers GL_EXT_shader_texture_lod GL_EXT_shadow_samplers GL_EXT_sparse_texture GL_EXT_sparse_texture2 GL_EXT_sRGB GL_EXT_sRGB_write_control GL_EXT_tessellation_point_size GL_EXT_tessellation_shader GL_EXT_texture_border_clamp GL_EXT_texture_buffer GL_EXT_texture_compression_bptc GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc GL_EXT_texture_cube_map_array GL_EXT_texture_filter_anisotropic GL_EXT_texture_filter_minmax GL_EXT_texture_format_BGRA8888 GL_EXT_texture_mirror_clamp_to_edge GL_EXT_texture_norm16 GL_EXT_texture_query_lod GL_EXT_texture_rg GL_EXT_texture_shadow_lod GL_EXT_texture_sRGB_R8 GL_EXT_texture_sRGB_decode GL_EXT_texture_storage GL_EXT_texture_view GL_EXT_draw_transform_feedback GL_EXT_unpack_subimage GL_EXT_window_rectangles GL_KHR_context_flush_control GL_KHR_debug GL_EXT_memory_object GL_EXT_memory_object_fd GL_NV_memory_object_sparse GL_KHR_parallel_shader_compile GL_KHR_no_error GL_KHR_robust_buffer_access_behavior GL_KHR_robustness GL_EXT_semaphore GL_EXT_semaphore_fd GL_NV_timeline_semaphore GL_KHR_shader_subgroup GL_KHR_texture_compression_astc_ldr GL_KHR_texture_compression_astc_sliced_3d GL_KHR_texture_compression_astc_hdr GL_NV_bgr GL_NV_bindless_texture GL_NV_blend_equation_advanced GL_NV_blend_equation_advanced_coherent GL_NVX_blend_equation_advanced_multi_draw_buffers GL_NV_blend_minmax_factor GL_NV_clip_space_w_scaling GL_NV_compute_shader_derivatives GL_NV_conditional_render GL_NV_conservative_raster GL_NV_conservative_raster_pre_snap_triangles GL_NV_copy_buffer GL_NV_copy_image GL_NV_draw_buffers GL_NV_draw_instanced GL_NV_draw_texture GL_NV_draw_vulkan_image GL_NV_EGL_stream_consumer_external GL_NV_explicit_attrib_location GL_NV_fbo_color_attachments GL_NV_fill_rectangle GL_NV_fragment_coverage_to_color GL_NV_fragment_shader_barycentric GL_NV_fragment_shader_interlock GL_NV_framebuffer_blit GL_NV_framebuffer_mixed_samples GL_NV_framebuffer_multisample GL_NV_generate_mipmap_sRGB GL_NV_geometry_shader_passthrough GL_NV_instanced_arrays GL_NV_internalformat_sample_query GL_NV_gpu_shader5 GL_NV_image_formats GL_NV_memory_attachment GL_NV_mesh_shader GL_NV_occlusion_query_samples GL_NV_non_square_matrices GL_NV_pack_subimage GL_NV_packed_float GL_NV_packed_float_linear GL_NV_path_rendering GL_NV_path_rendering_shared_edge GL_NV_pixel_buffer_object GL_NV_polygon_mode GL_NV_read_buffer GL_NV_read_depth GL_NV_read_depth_stencil GL_NV_read_stencil GL_NV_representative_fragment_test GL_NV_sample_locations GL_NV_sample_mask_override_coverage GL_NV_scissor_exclusive GL_NV_shader_atomic_fp16_vector GL_NV_shader_noperspective_interpolation GL_NV_shader_subgroup_partitioned GL_NV_shader_texture_footprint GL_NV_shading_rate_image GL_NV_shadow_samplers_array GL_NV_shadow_samplers_cube GL_NV_sRGB_formats GL_NV_stereo_view_rendering GL
+II 02-06-24 19:09:59.014 - [build/wayfire/src/default-config-backend.cpp:111] Using config file: /home/kk/.config/wayfire.ini
+WW 02-06-24 19:09:59.014 - [build/wayfire/subprojects/wf-config/src/file.cpp:575] Failed to open XML directory /home/kk/.local/share//wayfire/metadata
+II 02-06-24 19:09:59.014 - [build/wayfire/subprojects/wf-config/src/file.cpp:579] Reading XML configuration options from directory /usr/share/wayfire/metadata
+II 02-06-24 19:09:59.014 - [build/wayfire/subprojects/wf-config/src/file.cpp:529] Reading XML configuration options from file /usr/share/wayfire/metadata/input-method-v1.xml
+II 02-06-24 19:09:59.014 - [build/wayfire/subprojects/wf-config/src/file.cpp:529] Reading XML configuration options from file /usr/share/wayfire/metadata/foreign-toplevel.xml
+II 02-06-24 19:09:59.014 - [build/wayfire/subprojects/wf-config/src/file.cpp:529] Reading XML configuration options from file /usr/share/wayfire/metadata/invert.xml
+II 02-06-24 19:09:59.014 - [build/wayfire/subprojects/wf-config/src/file.cpp:529] Reading XML configuration options from file /usr/share/wayfire/metadata/preserve-output.xml
+II 02-06-24 19:09:59.014 - [build/wayfire/subprojects/wf-config/src/file.cpp:529] Reading XML configuration options from file /usr/share/wayfire/metadata/vswipe.xml
+II 02-06-24 19:09:59.014 - [build/wayfire/subprojects/wf-config/src/file.cpp:529] Reading XML configuration options from file /usr/share/wayfire/metadata/animate.xml
+II 02-06-24 19:09:59.014 - [build/wayfire/subprojects/wf-config/src/file.cpp:529] Reading XML configuration options from file /usr/share/wayfire/metadata/switcher.xml
+II 02-06-24 19:09:59.014 - [build/wayfire/subprojects/wf-config/src/file.cpp:529] Reading XML configuration options from file /usr/share/wayfire/metadata/alpha.xml
+II 02-06-24 19:09:59.015 - [build/wayfire/subprojects/wf-config/src/file.cpp:529] Reading XML configuration options from file /usr/share/wayfire/metadata/workarounds.xml
+II 02-06-24 19:09:59.015 - [build/wayfire/subprojects/wf-config/src/file.cpp:529] Reading XML configuration options from file /usr/share/wayfire/metadata/command.xml
+II 02-06-24 19:09:59.015 - [build/wayfire/subprojects/wf-config/src/file.cpp:529] Reading XML configuration options from file /usr/share/wayfire/metadata/wayfire-shell.xml
+II 02-06-24 19:09:59.015 - [build/wayfire/subprojects/wf-config/src/file.cpp:529] Reading XML configuration options from file /usr/share/wayfire/metadata/resize.xml
+II 02-06-24 19:09:59.015 - [build/wayfire/subprojects/wf-config/src/file.cpp:529] Reading XML configuration options from file /usr/share/wayfire/metadata/fisheye.xml
+II 02-06-24 19:09:59.015 - [build/wayfire/subprojects/wf-config/src/file.cpp:529] Reading XML configuration options from file /usr/share/wayfire/metadata/place.xml
+II 02-06-24 19:09:59.015 - [build/wayfire/subprojects/wf-config/src/file.cpp:529] Reading XML configuration options from file /usr/share/wayfire/metadata/extra-gestures.xml
+II 02-06-24 19:09:59.015 - [build/wayfire/subprojects/wf-config/src/file.cpp:529] Reading XML configuration options from file /usr/share/wayfire/metadata/expo.xml
+II 02-06-24 19:09:59.015 - [build/wayfire/subprojects/wf-config/src/file.cpp:529] Reading XML configuration options from file /usr/share/wayfire/metadata/output.xml
+II 02-06-24 19:09:59.015 - [build/wayfire/subprojects/wf-config/src/file.cpp:529] Reading XML configuration options from file /usr/share/wayfire/metadata/blur.xml
+II 02-06-24 19:09:59.015 - [build/wayfire/subprojects/wf-config/src/file.cpp:529] Reading XML configuration options from file /usr/share/wayfire/metadata/ipc-rules.xml
+II 02-06-24 19:09:59.015 - [build/wayfire/subprojects/wf-config/src/file.cpp:529] Reading XML configuration options from file /usr/share/wayfire/metadata/idle.xml
+II 02-06-24 19:09:59.015 - [build/wayfire/subprojects/wf-config/src/file.cpp:529] Reading XML configuration options from file /usr/share/wayfire/metadata/ipc.xml
+II 02-06-24 19:09:59.015 - [build/wayfire/subprojects/wf-config/src/file.cpp:529] Reading XML configuration options from file /usr/share/wayfire/metadata/simple-tile.xml
+II 02-06-24 19:09:59.015 - [build/wayfire/subprojects/wf-config/src/file.cpp:529] Reading XML configuration options from file /usr/share/wayfire/metadata/input.xml
+II 02-06-24 19:09:59.016 - [build/wayfire/subprojects/wf-config/src/file.cpp:529] Reading XML configuration options from file /usr/share/wayfire/metadata/scale-title-filter.xml
+II 02-06-24 19:09:59.016 - [build/wayfire/subprojects/wf-config/src/file.cpp:529] Reading XML configuration options from file /usr/share/wayfire/metadata/oswitch.xml
+II 02-06-24 19:09:59.016 - [build/wayfire/subprojects/wf-config/src/file.cpp:529] Reading XML configuration options from file /usr/share/wayfire/metadata/cube.xml
+II 02-06-24 19:09:59.016 - [build/wayfire/subprojects/wf-config/src/file.cpp:529] Reading XML configuration options from file /usr/share/wayfire/metadata/grid.xml
+II 02-06-24 19:09:59.016 - [build/wayfire/subprojects/wf-config/src/file.cpp:529] Reading XML configuration options from file /usr/share/wayfire/metadata/wm-actions.xml
+II 02-06-24 19:09:59.016 - [build/wayfire/subprojects/wf-config/src/file.cpp:529] Reading XML configuration options from file /usr/share/wayfire/metadata/wsets.xml
+II 02-06-24 19:09:59.016 - [build/wayfire/subprojects/wf-config/src/file.cpp:529] Reading XML configuration options from file /usr/share/wayfire/metadata/xdg-activation.xml
+II 02-06-24 19:09:59.016 - [build/wayfire/subprojects/wf-config/src/file.cpp:529] Reading XML configuration options from file /usr/share/wayfire/metadata/fast-switcher.xml
+II 02-06-24 19:09:59.016 - [build/wayfire/subprojects/wf-config/src/file.cpp:529] Reading XML configuration options from file /usr/share/wayfire/metadata/core.xml
+II 02-06-24 19:09:59.016 - [build/wayfire/subprojects/wf-config/src/file.cpp:529] Reading XML configuration options from file /usr/share/wayfire/metadata/shortcuts-inhibit.xml
+II 02-06-24 19:09:59.016 - [build/wayfire/subprojects/wf-config/src/file.cpp:529] Reading XML configuration options from file /usr/share/wayfire/metadata/gtk-shell.xml
+II 02-06-24 19:09:59.016 - [build/wayfire/subprojects/wf-config/src/file.cpp:529] Reading XML configuration options from file /usr/share/wayfire/metadata/zoom.xml
+II 02-06-24 19:09:59.016 - [build/wayfire/subprojects/wf-config/src/file.cpp:529] Reading XML configuration options from file /usr/share/wayfire/metadata/vswitch.xml
+II 02-06-24 19:09:59.016 - [build/wayfire/subprojects/wf-config/src/file.cpp:529] Reading XML configuration options from file /usr/share/wayfire/metadata/input-device.xml
+II 02-06-24 19:09:59.016 - [build/wayfire/subprojects/wf-config/src/file.cpp:529] Reading XML configuration options from file /usr/share/wayfire/metadata/session-lock.xml
+II 02-06-24 19:09:59.016 - [build/wayfire/subprojects/wf-config/src/file.cpp:529] Reading XML configuration options from file /usr/share/wayfire/metadata/decoration.xml
+II 02-06-24 19:09:59.016 - [build/wayfire/subprojects/wf-config/src/file.cpp:529] Reading XML configuration options from file /usr/share/wayfire/metadata/scale.xml
+II 02-06-24 19:09:59.017 - [build/wayfire/subprojects/wf-config/src/file.cpp:529] Reading XML configuration options from file /usr/share/wayfire/metadata/autostart.xml
+II 02-06-24 19:09:59.017 - [build/wayfire/subprojects/wf-config/src/file.cpp:529] Reading XML configuration options from file /usr/share/wayfire/metadata/window-rules.xml
+II 02-06-24 19:09:59.017 - [build/wayfire/subprojects/wf-config/src/file.cpp:529] Reading XML configuration options from file /usr/share/wayfire/metadata/wrot.xml
+II 02-06-24 19:09:59.017 - [build/wayfire/subprojects/wf-config/src/file.cpp:529] Reading XML configuration options from file /usr/share/wayfire/metadata/move.xml
+II 02-06-24 19:09:59.017 - [build/wayfire/subprojects/wf-config/src/file.cpp:529] Reading XML configuration options from file /usr/share/wayfire/metadata/wobbly.xml
+EE 02-06-24 19:09:59.017 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/always_binding_launcher is neither specified nor has a default value
+EE 02-06-24 19:09:59.017 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/always_binding_light_down is neither specified nor has a default value
+EE 02-06-24 19:09:59.017 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/always_binding_light_up is neither specified nor has a default value
+EE 02-06-24 19:09:59.017 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/always_binding_lock is neither specified nor has a default value
+EE 02-06-24 19:09:59.017 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/always_binding_logout is neither specified nor has a default value
+EE 02-06-24 19:09:59.017 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/always_binding_mute is neither specified nor has a default value
+EE 02-06-24 19:09:59.017 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/always_binding_screenshot is neither specified nor has a default value
+EE 02-06-24 19:09:59.017 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/always_binding_screenshot_interactive is neither specified nor has a default value
+EE 02-06-24 19:09:59.017 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/always_binding_terminal is neither specified nor has a default value
+EE 02-06-24 19:09:59.017 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/always_binding_volume_down is neither specified nor has a default value
+EE 02-06-24 19:09:59.017 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/always_binding_volume_up is neither specified nor has a default value
+EE 02-06-24 19:09:59.017 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/binding_light_down is neither specified nor has a default value
+EE 02-06-24 19:09:59.017 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/binding_light_up is neither specified nor has a default value
+EE 02-06-24 19:09:59.017 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/binding_volume_down is neither specified nor has a default value
+EE 02-06-24 19:09:59.017 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/binding_volume_up is neither specified nor has a default value
+EE 02-06-24 19:09:59.017 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/release_binding_launcher is neither specified nor has a default value
+EE 02-06-24 19:09:59.017 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/release_binding_light_down is neither specified nor has a default value
+EE 02-06-24 19:09:59.017 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/release_binding_light_up is neither specified nor has a default value
+EE 02-06-24 19:09:59.017 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/release_binding_lock is neither specified nor has a default value
+EE 02-06-24 19:09:59.017 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/release_binding_logout is neither specified nor has a default value
+EE 02-06-24 19:09:59.017 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/release_binding_mute is neither specified nor has a default value
+EE 02-06-24 19:09:59.017 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/release_binding_screenshot is neither specified nor has a default value
+EE 02-06-24 19:09:59.017 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/release_binding_screenshot_interactive is neither specified nor has a default value
+EE 02-06-24 19:09:59.017 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/release_binding_terminal is neither specified nor has a default value
+EE 02-06-24 19:09:59.017 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/release_binding_volume_down is neither specified nor has a default value
+EE 02-06-24 19:09:59.017 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/release_binding_volume_up is neither specified nor has a default value
+EE 02-06-24 19:09:59.017 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/repeatable_binding_launcher is neither specified nor has a default value
+EE 02-06-24 19:09:59.017 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/repeatable_binding_lock is neither specified nor has a default value
+EE 02-06-24 19:09:59.017 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/repeatable_binding_logout is neither specified nor has a default value
+EE 02-06-24 19:09:59.017 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/repeatable_binding_mute is neither specified nor has a default value
+EE 02-06-24 19:09:59.017 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/repeatable_binding_screenshot is neither specified nor has a default value
+EE 02-06-24 19:09:59.017 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/repeatable_binding_screenshot_interactive is neither specified nor has a default value
+EE 02-06-24 19:09:59.017 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/repeatable_binding_terminal is neither specified nor has a default value
+EE 02-06-24 19:09:59.018 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/always_binding_launcher is neither specified nor has a default value
+EE 02-06-24 19:09:59.018 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/always_binding_light_down is neither specified nor has a default value
+EE 02-06-24 19:09:59.018 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/always_binding_light_up is neither specified nor has a default value
+EE 02-06-24 19:09:59.018 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/always_binding_lock is neither specified nor has a default value
+EE 02-06-24 19:09:59.018 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/always_binding_logout is neither specified nor has a default value
+EE 02-06-24 19:09:59.018 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/always_binding_mute is neither specified nor has a default value
+EE 02-06-24 19:09:59.018 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/always_binding_screenshot is neither specified nor has a default value
+EE 02-06-24 19:09:59.018 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/always_binding_screenshot_interactive is neither specified nor has a default value
+EE 02-06-24 19:09:59.018 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/always_binding_terminal is neither specified nor has a default value
+EE 02-06-24 19:09:59.018 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/always_binding_volume_down is neither specified nor has a default value
+EE 02-06-24 19:09:59.018 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/always_binding_volume_up is neither specified nor has a default value
+EE 02-06-24 19:09:59.018 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/binding_light_down is neither specified nor has a default value
+EE 02-06-24 19:09:59.018 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/binding_light_up is neither specified nor has a default value
+EE 02-06-24 19:09:59.018 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/binding_volume_down is neither specified nor has a default value
+EE 02-06-24 19:09:59.018 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/binding_volume_up is neither specified nor has a default value
+EE 02-06-24 19:09:59.018 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/release_binding_launcher is neither specified nor has a default value
+EE 02-06-24 19:09:59.018 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/release_binding_light_down is neither specified nor has a default value
+EE 02-06-24 19:09:59.018 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/release_binding_light_up is neither specified nor has a default value
+EE 02-06-24 19:09:59.018 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/release_binding_lock is neither specified nor has a default value
+EE 02-06-24 19:09:59.018 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/release_binding_logout is neither specified nor has a default value
+EE 02-06-24 19:09:59.018 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/release_binding_mute is neither specified nor has a default value
+EE 02-06-24 19:09:59.018 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/release_binding_screenshot is neither specified nor has a default value
+EE 02-06-24 19:09:59.018 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/release_binding_screenshot_interactive is neither specified nor has a default value
+EE 02-06-24 19:09:59.018 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/release_binding_terminal is neither specified nor has a default value
+EE 02-06-24 19:09:59.018 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/release_binding_volume_down is neither specified nor has a default value
+EE 02-06-24 19:09:59.018 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/release_binding_volume_up is neither specified nor has a default value
+EE 02-06-24 19:09:59.018 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/repeatable_binding_launcher is neither specified nor has a default value
+EE 02-06-24 19:09:59.018 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/repeatable_binding_lock is neither specified nor has a default value
+EE 02-06-24 19:09:59.018 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/repeatable_binding_logout is neither specified nor has a default value
+EE 02-06-24 19:09:59.018 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/repeatable_binding_mute is neither specified nor has a default value
+EE 02-06-24 19:09:59.018 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/repeatable_binding_screenshot is neither specified nor has a default value
+EE 02-06-24 19:09:59.018 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/repeatable_binding_screenshot_interactive is neither specified nor has a default value
+EE 02-06-24 19:09:59.018 - [build/wayfire/subprojects/wf-config/src/compound-option.cpp:86] The option command/repeatable_binding_terminal is neither specified nor has a default value
+II 02-06-24 19:09:59.018 - [backend/headless/backend.c:67] Creating headless backend
+II 02-06-24 19:09:59.019 - [backend/headless/backend.c:17] Starting headless backend
+II 02-06-24 19:09:59.019 - [build/wayfire/src/main.cpp:468] Using socket name wayland-1
+II 02-06-24 19:09:59.818 - [build/wayfire/src/core/seat/input-manager.cpp:47] handle new input: Power Button, default mapping: Power Button
+II 02-06-24 19:09:59.823 - [build/wayfire/src/core/seat/input-manager.cpp:47] handle new input: Power Button, default mapping: Power Button
+II 02-06-24 19:09:59.828 - [build/wayfire/src/core/seat/input-manager.cpp:47] handle new input: Yubico YubiKey OTP+FIDO+CCID, default mapping: Yubico YubiKey OTP+FIDO+CCID
+II 02-06-24 19:09:59.833 - [build/wayfire/src/core/seat/input-manager.cpp:47] handle new input: Y&amp;R YR6095, default mapping: Y&amp;R YR6095
+II 02-06-24 19:09:59.838 - [build/wayfire/src/core/seat/input-manager.cpp:47] handle new input: Y&amp;R YR6095 Mouse, default mapping: Y&amp;R YR6095 Mouse
+II 02-06-24 19:09:59.838 - [build/wayfire/src/core/seat/input-manager.cpp:47] handle new input: Y&amp;R YR6095 System Control, default mapping: Y&amp;R YR6095 System Control
+II 02-06-24 19:09:59.843 - [build/wayfire/src/core/seat/input-manager.cpp:47] handle new input: Y&amp;R YR6095 Consumer Control, default mapping: Y&amp;R YR6095 Consumer Control
+II 02-06-24 19:09:59.847 - [build/wayfire/src/core/seat/input-manager.cpp:47] handle new input: Y&amp;R YR6095 Consumer Control, default mapping: Y&amp;R YR6095 Consumer Control
+II 02-06-24 19:09:59.847 - [build/wayfire/src/core/seat/input-manager.cpp:47] handle new input: Y&amp;R YR6095 Keyboard, default mapping: Y&amp;R YR6095 Keyboard
+II 02-06-24 19:09:59.852 - [build/wayfire/src/core/seat/input-manager.cpp:47] handle new input: Logitech G Pro , default mapping: Logitech G Pro 
+II 02-06-24 19:09:59.857 - [build/wayfire/src/core/seat/input-manager.cpp:47] handle new input: Logitech G Pro , default mapping: Logitech G Pro 
+II 02-06-24 19:09:59.857 - [backend/drm/drm.c:1556] Scanning DRM connectors on /dev/dri/card0
+II 02-06-24 19:09:59.858 - [backend/drm/drm.c:1607] Found connector 'DVI-D-1'
+II 02-06-24 19:09:59.858 - [backend/drm/drm.c:1607] Found connector 'HDMI-A-1'
+II 02-06-24 19:09:59.961 - [backend/drm/drm.c:1607] Found connector 'DP-1'
+II 02-06-24 19:09:59.961 - [backend/drm/drm.c:1632] 'DP-1' connected
+II 02-06-24 19:09:59.961 - [backend/drm/drm.c:1440] Detected modes:
+II 02-06-24 19:09:59.961 - [backend/drm/drm.c:1468]   3840x2160 @ 160.000 Hz 
+II 02-06-24 19:09:59.961 - [backend/drm/drm.c:1468]   3840x2160 @ 144.000 Hz 
+II 02-06-24 19:09:59.961 - [backend/drm/drm.c:1468]   3840x2160 @ 119.880 Hz 
+II 02-06-24 19:09:59.961 - [backend/drm/drm.c:1468]   3840x2160 @ 94.981 Hz 
+II 02-06-24 19:09:59.961 - [backend/drm/drm.c:1468]   3840x2160 @ 59.940 Hz 
+II 02-06-24 19:09:59.961 - [backend/drm/drm.c:1468]   3840x2160 @ 59.997 Hz 
+II 02-06-24 19:09:59.961 - [backend/drm/drm.c:1468]   3840x2160 @ 29.970 Hz 
+II 02-06-24 19:09:59.961 - [backend/drm/drm.c:1468]   2560x1440 @ 144.000 Hz 
+II 02-06-24 19:09:59.961 - [backend/drm/drm.c:1468]   1920x1080 @ 119.930 Hz 
+II 02-06-24 19:09:59.961 - [backend/drm/drm.c:1468]   1920x1080 @ 119.879 Hz 
+II 02-06-24 19:09:59.961 - [backend/drm/drm.c:1468]   1920x1080 @ 60.000 Hz 
+II 02-06-24 19:09:59.961 - [backend/drm/drm.c:1468]   1920x1080 @ 59.939 Hz 
+II 02-06-24 19:09:59.961 - [backend/drm/drm.c:1468]   1920x1080 @ 50.000 Hz 
+II 02-06-24 19:09:59.961 - [backend/drm/drm.c:1468]   1680x1050 @ 119.986 Hz 
+II 02-06-24 19:09:59.961 - [backend/drm/drm.c:1468]   1680x1050 @ 59.954 Hz 
+II 02-06-24 19:09:59.961 - [backend/drm/drm.c:1468]   1600x900 @ 60.000 Hz 
+II 02-06-24 19:09:59.961 - [backend/drm/drm.c:1468]   1280x1024 @ 119.958 Hz 
+II 02-06-24 19:09:59.961 - [backend/drm/drm.c:1468]   1280x1024 @ 75.025 Hz 
+II 02-06-24 19:09:59.961 - [backend/drm/drm.c:1468]   1280x1024 @ 60.020 Hz 
+II 02-06-24 19:09:59.961 - [backend/drm/drm.c:1468]   1440x900 @ 59.999 Hz 
+II 02-06-24 19:09:59.961 - [backend/drm/drm.c:1468]   1440x900 @ 59.887 Hz 
+II 02-06-24 19:09:59.961 - [backend/drm/drm.c:1468]   1280x720 @ 59.943 Hz 
+II 02-06-24 19:09:59.961 - [backend/drm/drm.c:1468]   1280x720 @ 50.000 Hz 
+II 02-06-24 19:09:59.961 - [backend/drm/drm.c:1468]   1024x768 @ 75.029 Hz 
+II 02-06-24 19:09:59.961 - [backend/drm/drm.c:1468]   1024x768 @ 70.069 Hz 
+II 02-06-24 19:09:59.962 - [backend/drm/drm.c:1468]   1024x768 @ 60.004 Hz 
+II 02-06-24 19:09:59.962 - [backend/drm/drm.c:1468]   800x600 @ 75.000 Hz 
+II 02-06-24 19:09:59.962 - [backend/drm/drm.c:1468]   800x600 @ 72.188 Hz 
+II 02-06-24 19:09:59.962 - [backend/drm/drm.c:1468]   800x600 @ 60.317 Hz 
+II 02-06-24 19:09:59.962 - [backend/drm/drm.c:1468]   720x576 @ 50.000 Hz 
+II 02-06-24 19:09:59.962 - [backend/drm/drm.c:1468]   720x480 @ 59.940 Hz 
+II 02-06-24 19:09:59.962 - [backend/drm/drm.c:1468]   640x480 @ 75.000 Hz 
+II 02-06-24 19:09:59.962 - [backend/drm/drm.c:1468]   640x480 @ 72.809 Hz 
+II 02-06-24 19:09:59.962 - [backend/drm/drm.c:1468]   640x480 @ 59.940 Hz 
+II 02-06-24 19:09:59.962 - [backend/drm/drm.c:1468]   640x480 @ 59.929 Hz 
+II 02-06-24 19:09:59.962 - [backend/drm/drm.c:1488] Physical size: 600x340
+II 02-06-24 19:09:59.962 - [backend/drm/drm.c:1607] Found connector 'HDMI-A-2'
+II 02-06-24 19:09:59.962 - [backend/drm/drm.c:1668] connector DP-1: Requesting modeset
+II 02-06-24 19:09:59.962 - [build/wayfire/src/core/output-layout.cpp:1171] new output: DP-1 ("HKC OVERSEAS LIMITED VG273U PRO 0000000000001")
+II 02-06-24 19:09:59.962 - [build/wayfire/src/core/output-layout.cpp:455] loaded mode auto
+II 02-06-24 19:09:59.966 - [backend/drm/drm.c:790] connector DP-1: Modesetting with 640x480 @ 59.929 Hz
+(type equals variant: [type: string, value: toplevel] | (type equals variant: [type: string, value: x-or] &amp; focusable equals variant: [type: bool, value: 1]))
+type equals variant: [type: string, value: overlay]
+false
+false
+false
+false
+false
+EE 02-06-24 19:10:00.124 - [types/wlr_cursor.c:1174] Cannot map device "Power Button" to output (not found in this cursor)
+EE 02-06-24 19:10:00.124 - [types/wlr_cursor.c:1174] Cannot map device "Power Button" to output (not found in this cursor)
+EE 02-06-24 19:10:00.124 - [types/wlr_cursor.c:1174] Cannot map device "Yubico YubiKey OTP+FIDO+CCID" to output (not found in this cursor)
+EE 02-06-24 19:10:00.124 - [types/wlr_cursor.c:1174] Cannot map device "Y&amp;R YR6095" to output (not found in this cursor)
+EE 02-06-24 19:10:00.124 - [types/wlr_cursor.c:1174] Cannot map device "Y&amp;R YR6095 System Control" to output (not found in this cursor)
+EE 02-06-24 19:10:00.124 - [types/wlr_cursor.c:1174] Cannot map device "Y&amp;R YR6095 Consumer Control" to output (not found in this cursor)
+EE 02-06-24 19:10:00.124 - [types/wlr_cursor.c:1174] Cannot map device "Y&amp;R YR6095 Keyboard" to output (not found in this cursor)
+EE 02-06-24 19:10:00.124 - [types/wlr_cursor.c:1174] Cannot map device "Logitech G Pro " to output (not found in this cursor)
+II 02-06-24 19:10:00.127 - [xwayland/server.c:108] Starting Xwayland on :0
+II 02-06-24 19:10:00.234 - [build/wayfire/src/view/xwayland.cpp:283] loading xwayland cursor 0x5bd7b9fedea0
+II 02-06-24 19:10:00.234 - [build/wayfire/src/view/xwayland.cpp:287] setting xwayland cursor 0x5bd7b9fed720
+II 02-06-24 19:10:07.317 - [build/wayfire/src/core/seat/input-manager.cpp:106] remove input: Logitech G Pro 
+II 02-06-24 19:10:07.317 - [build/wayfire/src/core/seat/input-manager.cpp:106] remove input: Logitech G Pro 
+II 02-06-24 19:10:07.317 - [build/wayfire/src/core/seat/input-manager.cpp:106] remove input: Y&amp;R YR6095 Keyboard
+II 02-06-24 19:10:07.317 - [build/wayfire/src/core/seat/input-manager.cpp:106] remove input: Y&amp;R YR6095 Consumer Control
+II 02-06-24 19:10:07.317 - [build/wayfire/src/core/seat/input-manager.cpp:106] remove input: Y&amp;R YR6095 Consumer Control
+II 02-06-24 19:10:07.317 - [build/wayfire/src/core/seat/input-manager.cpp:106] remove input: Y&amp;R YR6095 System Control
+II 02-06-24 19:10:07.318 - [build/wayfire/src/core/seat/input-manager.cpp:106] remove input: Y&amp;R YR6095 Mouse
+II 02-06-24 19:10:07.318 - [build/wayfire/src/core/seat/input-manager.cpp:106] remove input: Y&amp;R YR6095
+II 02-06-24 19:10:07.318 - [build/wayfire/src/core/seat/input-manager.cpp:106] remove input: Yubico YubiKey OTP+FIDO+CCID
+II 02-06-24 19:10:07.404 - [build/wayfire/src/core/seat/input-manager.cpp:106] remove input: Power Button
+II 02-06-24 19:10:07.404 - [build/wayfire/src/core/seat/input-manager.cpp:106] remove input: Power Button
+II 02-06-24 19:10:07.404 - [libseat] [libseat/backend/seatd.c:207] Disabling seat
+II 02-06-24 19:10:07.404 - [backend/drm/backend.c:143] DRM fd paused
+II 02-06-24 19:10:12.211 - [build/wayfire/src/main.cpp:484] Got SIGINT, shutting down
+II 02-06-24 19:10:12.211 - [build/wayfire/src/core/core.cpp:274] Unloading plugins...
+II 02-06-24 19:10:12.212 - [build/wayfire/src/core/core.cpp:279] Stopping clients...
+II 02-06-24 19:10:12.212 - [build/wayfire/src/core/core.cpp:281] Freeing resources...
+II 02-06-24 19:10:12.215 - [build/wayfire/src/main.cpp:491] Shutdown successful!
+
+</pre>
+</div>
+</div>
+</div>
+<div class="taglist"><a href="./tags.html">Tags</a>: <a href="./tag-tutorial.html">tutorial</a> </div>]]></description>
+  <category><![CDATA[tutorial]]></category>
+  <link>./2024-06-13-archlinux-with-bcachefs-efibootmgr.html</link>
+  <guid>./2024-06-13-archlinux-with-bcachefs-efibootmgr.html</guid>
+  <pubDate>Thu, 13 Jun 2024 20:14:00 +0800</pubDate>
+</item>
+<item>
+  <title><![CDATA[use lute v3]]></title>
+  <description><![CDATA[
+
+<div id="outline-container-org82e4601" class="outline-2">
+<h2 id="org82e4601">Install lute</h2>
+<div class="outline-text-2" id="text-org82e4601">
+</div>
+<div id="outline-container-org20f11ad" class="outline-3">
+<h3 id="org20f11ad">Useing venv</h3>
+<div class="outline-text-3" id="text-org20f11ad">
+<p>
+Create a folder and enter it to create a Python virtual environment.
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">python -m venv envlute
+</pre>
+</div>
+<p>
+Execute the activation script in the <code>envlute\Scripts</code> folder according to the shell currently in use.
+</p>
+</div>
+</div>
+<div id="outline-container-org7c78211" class="outline-3">
+<h3 id="org7c78211">Install via pip</h3>
+<div class="outline-text-3" id="text-org7c78211">
+<div class="org-src-container">
+<pre class="src src-shell">pip install lute3
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org4cd04b0" class="outline-3">
+<h3 id="org4cd04b0">Starting in a virtual environment</h3>
+<div class="outline-text-3" id="text-org4cd04b0">
+<div class="org-src-container">
+<pre class="src src-shell">python -m lute.main
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org147b4e6" class="outline-2">
+<h2 id="org147b4e6">Use lute</h2>
+<div class="outline-text-2" id="text-org147b4e6">
+</div>
+<div id="outline-container-orgf4a3407" class="outline-3">
+<h3 id="orgf4a3407">Update</h3>
+<div class="outline-text-3" id="text-orgf4a3407">
+<div class="org-src-container">
+<pre class="src src-shell">pip install --upgrade lute3
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org7cbeb43" class="outline-3">
+<h3 id="org7cbeb43">Config</h3>
+<div class="outline-text-3" id="text-org7cbeb43">
+</div>
+<div id="outline-container-org4758a99" class="outline-4">
+<h4 id="org4758a99">Dicts</h4>
+<div class="outline-text-4" id="text-org4758a99">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">Name</td>
+<td class="org-left">type</td>
+<td class="org-left">Url</td>
+</tr>
+
+<tr>
+<td class="org-left">collins</td>
+<td class="org-left">en-zh</td>
+<td class="org-left"><a href="https://www.collinsdictionary.com/dictionary/english-chinese/">https://www.collinsdictionary.com/dictionary/english-chinese/</a>###</td>
+</tr>
+
+<tr>
+<td class="org-left">cambridge</td>
+<td class="org-left">en-zh</td>
+<td class="org-left"><a href="https://dictionary.cambridge.org/zhs/%E8%AF%8D%E5%85%B8/%E8%8B%B1%E8%AF%AD-%E6%B1%89%E8%AF%AD-%E7%AE%80%E4%BD%93/">https://dictionary.cambridge.org/zhs/%E8%AF%8D%E5%85%B8/%E8%8B%B1%E8%AF%AD-%E6%B1%89%E8%AF%AD-%E7%AE%80%E4%BD%93/</a>###</td>
+</tr>
+
+<tr>
+<td class="org-left">bing</td>
+<td class="org-left">en-zh</td>
+<td class="org-left"><a href="https://www.bing.com/dict/">https://www.bing.com/dict/</a>###</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org510fcc1" class="outline-4">
+<h4 id="org510fcc1">Custom styles</h4>
+<div class="outline-text-4" id="text-org510fcc1">
+<div class="org-src-container">
+<pre class="src src-css">/* Custom css to modify Lute's appearance. */
+body {
+  font-family: "IBM Plex Serif", serif;
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/ibmplexserif/v19/jizAREVNn1dOx-zrZ2X3pZvkTi2k_iI5q1vxiQ.woff2) format('woff2');
+}
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="taglist"><a href="./tags.html">Tags</a>: <a href="./tag-tutorial.html">tutorial</a> </div>]]></description>
+  <category><![CDATA[tutorial]]></category>
+  <link>./2024-06-13-use-lute-v3.html</link>
+  <guid>./2024-06-13-use-lute-v3.html</guid>
+  <pubDate>Thu, 13 Jun 2024 19:48:00 +0800</pubDate>
+</item>
+</channel>
+</rss>

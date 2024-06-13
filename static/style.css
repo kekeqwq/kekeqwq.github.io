@@ -1,0 +1,17 @@
+body{
+    background-color: #EDD1B0;
+    font-family: "IBM Plex Serif", serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    src: url(https://fonts.gstatic.com/s/ibmplexserif/v19/jizAREVNn1dOx-zrZ2X3pZvkTi2k_iI5q1vxiQ.woff2) format('woff2');
+}
+a {
+    font-size: 23px;
+    background-color: #EDDD6E;
+}
+
+.todo {
+    font-size: 25px;
+    background-color: #FF0000;
+}
