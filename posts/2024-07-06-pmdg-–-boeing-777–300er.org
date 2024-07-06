@@ -1,0 +1,58 @@
+#+title: PMDG – Boeing 777–300ER
+#+date: <2024-07-06 18:31>
+#+description: 
+#+filetags: flightsim msfs boeing
+
+#+begin_quote
+ref: https://www.bilibili.com/video/BV13H4y1w73x
+#+end_quote
+* COLD DARK START
+** PANEL 1
+- IPAD:呼叫地勤接通地面电源
+- PANEL:打开 BATTERY 'PRIMARY EXT PWR' 'SECONDARY EXT PWR' 'ADIRU'
+** CDU
+- POS INIT: GPS POS --> SET INERTIAL POS 输入起飞机场 --> REF AIRPORT
+- ROUTE: ROUTE REQUEST --> SIMBRIEF --> SET PAYLOAD --> SET FUEL --> SELECT RTE (Wait REQUEST SENT) --> LOAD --> ACTIVATE --> EXEC
+- PERF INIT:ZFW(Insert) -- ACCEPT
+- LEGS: RTE DATA -->
+#+begin_quote
+WIND DATA LOAD --> WIND DATA REQUEST --> EXEC
+FMC COMM: DES FORECAST --> LOAD --> FORECAST REQUEST
+#+end_quote
+- DEP ARR 填写进离场信息，如果出现断点使用下方航路复制过来
+** PANEL 2
+- 打开 'IFE/PASS SEATS' 'CABIN UNILITY'
+- 'EMER LIGHTS' --> ARMED
+- 'WINDOW HEAT' x4
+-'HYDRAULIC R ELEC DEMAND' --> AUTO
+- 'SEAT BELTS' --> ON
+** FRONT PANEL
+- IPad 计算起飞性能后设定修正海压
+- EFIS 设定为 10nm TFC APRT TER 开
+- 左右两侧 F/D --> ON
+- HDG --> 起飞跑到航向
+- ALTITUDE --> 可以直接设定为巡航高度
+- LNAV VNAV --> ON
+- AUTO BROAKE --> RTO
+** CHKL
+- Packing brake --> 捏住刹车自动感应
+- OTHER --> ✔
+** CDU 2
+INIT REF
+- TAKEOFF --> 根据计算出来的起飞性能填写
+- TRUST LIM --> 根据计算出来的起飞性能填写
+- 配平 trim
+- 计算出来的 v2 安全速度 --> IAS
+** PLANE 3
+- APU --> 长按到 START 然后会自动回跳到 ON 稍等确认提示 APU RUNNING
+- 关门
+- 'PRIMARY EXT PWR' 'SECONDARY EXT PWR' --> OFF
+- Ipad 关闭地面电源
+- HYDRAULIC C2 C1 ELEC --> ON
+- HYDRAULIC 'L ELEC' --> AUTO
+- HYDRAULIC C1 C2 AIR --> AUTO
+- FUEL L R FWD/AFT PUMPS(检查中央油箱是否有油按需打开CENTER PUMPS)
+- BEACON --> ON
+** CHKL 2
+这时候可以全选
+* TODO PUSHBACK/ENGINE START

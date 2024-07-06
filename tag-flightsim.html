@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="alternate"
+      type="application/rss+xml"
+      href="./rss.xml"
+      title="RSS feed for ">
+<title>K</title>
+
+          <meta name="author" content="k">
+          <meta name="referrer" content="no-referrer">
+          <meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1">
+          <link href= "static/style.css" rel="stylesheet" type="text/css" />
+          <link rel="icon" href="static/favicon.ico">
+</head>
+<body>
+<div id="preamble" class="status">
+          <div class="header">
+              <a href="index.html">homepage</a>
+              <a href="archive.html">all posts</a>
+          </div>
+</div>
+<div id="content">
+<h1 class="title">Posts tagged "flightsim":</h1>
+<div class="post-date">06 Jul 2024</div><h1 class="post-title"><a href="./2024-07-06-pmdg-–-boeing-777–300er.html">PMDG – Boeing 777–300ER</a></h1>
+<blockquote>
+<p>
+ref: <a href="https://www.bilibili.com/video/BV13H4y1w73x">https://www.bilibili.com/video/BV13H4y1w73x</a>
+</p>
+</blockquote>
+<div id="outline-container-org70c218e" class="outline-2">
+<h2 id="org70c218e">COLD DARK START</h2>
+<div class="outline-text-2" id="text-org70c218e">
+</div>
+<div id="outline-container-orgf3f7322" class="outline-3">
+<h3 id="orgf3f7322">PANEL 1</h3>
+<div class="outline-text-3" id="text-orgf3f7322">
+<ul class="org-ul">
+<li>IPAD:呼叫地勤接通地面电源</li>
+<li>PANEL:打开 BATTERY 'PRIMARY EXT PWR' 'SECONDARY EXT PWR' 'ADIRU'</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgeba579e" class="outline-3">
+<h3 id="orgeba579e">CDU</h3>
+<div class="outline-text-3" id="text-orgeba579e">
+<ul class="org-ul">
+<li>POS INIT: GPS POS &#x2013;&gt; SET INERTIAL POS 输入起飞机场 &#x2013;&gt; REF AIRPORT</li>
+<li>ROUTE: ROUTE REQUEST &#x2013;&gt; SIMBRIEF &#x2013;&gt; SET PAYLOAD &#x2013;&gt; SET FUEL &#x2013;&gt; SELECT RTE (Wait REQUEST SENT) &#x2013;&gt; LOAD &#x2013;&gt; ACTIVATE &#x2013;&gt; EXEC</li>
+<li>PERF INIT:ZFW(Insert) &#x2013; ACCEPT</li>
+<li>LEGS: RTE DATA &#x2013;&gt;</li>
+</ul>
+<blockquote>
+<p>
+WIND DATA LOAD &#x2013;&gt; WIND DATA REQUEST &#x2013;&gt; EXEC
+FMC COMM: DES FORECAST &#x2013;&gt; LOAD &#x2013;&gt; FORECAST REQUEST
+</p>
+</blockquote>
+<ul class="org-ul">
+<li>DEP ARR 填写进离场信息，如果出现断点使用下方航路复制过来</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org84d657d" class="outline-3">
+<h3 id="org84d657d">PANEL 2</h3>
+<div class="outline-text-3" id="text-org84d657d">
+<ul class="org-ul">
+<li>打开 'IFE/PASS SEATS' 'CABIN UNILITY'</li>
+<li>'EMER LIGHTS' &#x2013;&gt; ARMED</li>
+<li>'WINDOW HEAT' x4</li>
+</ul>
+<p>
+-'HYDRAULIC R ELEC DEMAND' &#x2013;&gt; AUTO
+</p>
+<ul class="org-ul">
+<li>'SEAT BELTS' &#x2013;&gt; ON</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd2733d1" class="outline-3">
+<h3 id="orgd2733d1">FRONT PANEL</h3>
+<div class="outline-text-3" id="text-orgd2733d1">
+<ul class="org-ul">
+<li>IPad 计算起飞性能后设定修正海压</li>
+<li>EFIS 设定为 10nm TFC APRT TER 开</li>
+<li>左右两侧 F/D &#x2013;&gt; ON</li>
+<li>HDG &#x2013;&gt; 起飞跑到航向</li>
+<li>ALTITUDE &#x2013;&gt; 可以直接设定为巡航高度</li>
+<li>LNAV VNAV &#x2013;&gt; ON</li>
+<li>AUTO BROAKE &#x2013;&gt; RTO</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf0049f3" class="outline-3">
+<h3 id="orgf0049f3">CHKL</h3>
+<div class="outline-text-3" id="text-orgf0049f3">
+<ul class="org-ul">
+<li>Packing brake &#x2013;&gt; 捏住刹车自动感应</li>
+<li>OTHER &#x2013;&gt; ✔</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org96ddfc8" class="outline-3">
+<h3 id="org96ddfc8">CDU 2</h3>
+<div class="outline-text-3" id="text-org96ddfc8">
+<p>
+INIT REF
+</p>
+<ul class="org-ul">
+<li>TAKEOFF &#x2013;&gt; 根据计算出来的起飞性能填写</li>
+<li>TRUST LIM &#x2013;&gt; 根据计算出来的起飞性能填写</li>
+<li>配平 trim</li>
+<li>计算出来的 v2 安全速度 &#x2013;&gt; IAS</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9a3c5c0" class="outline-3">
+<h3 id="org9a3c5c0">PLANE 3</h3>
+<div class="outline-text-3" id="text-org9a3c5c0">
+<ul class="org-ul">
+<li>APU &#x2013;&gt; 长按到 START 然后会自动回跳到 ON 稍等确认提示 APU RUNNING</li>
+<li>关门</li>
+<li>'PRIMARY EXT PWR' 'SECONDARY EXT PWR' &#x2013;&gt; OFF</li>
+<li>Ipad 关闭地面电源</li>
+<li>HYDRAULIC C2 C1 ELEC &#x2013;&gt; ON</li>
+<li>HYDRAULIC 'L ELEC' &#x2013;&gt; AUTO</li>
+<li>HYDRAULIC C1 C2 AIR &#x2013;&gt; AUTO</li>
+<li>FUEL L R FWD/AFT PUMPS(检查中央油箱是否有油按需打开CENTER PUMPS)</li>
+<li>BEACON &#x2013;&gt; ON</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org72a708a" class="outline-3">
+<h3 id="org72a708a">CHKL 2</h3>
+<div class="outline-text-3" id="text-org72a708a">
+<p>
+这时候可以全选
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbe5367b" class="outline-2">
+<h2 id="orgbe5367b"><span class="todo TODO">TODO</span> PUSHBACK/ENGINE START</h2>
+</div>
+<div class="taglist"><a href="./tags.html">Tags</a>: <a href="./tag-flightsim.html">flightsim</a> <a href="./tag-msfs.html">msfs</a> <a href="./tag-boeing.html">boeing</a> </div><div id="archive">
+<a href="./archive.html">Other posts</a>
+</div>
+</div>
+<div id="postamble" class="status"><center>kkk@2024</center></div>
+</body>
+</html>
