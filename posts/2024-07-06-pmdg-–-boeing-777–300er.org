@@ -43,7 +43,7 @@ INIT REF
 - TRUST LIM --> 根据计算出来的起飞性能填写
 - 配平 trim
 - 计算出来的 v2 安全速度 --> IAS
-** PLANE 3
+** PANEL 3
 - APU --> 长按到 START 然后会自动回跳到 ON 稍等确认提示 APU RUNNING
 - 关门
 - 'PRIMARY EXT PWR' 'SECONDARY EXT PWR' --> OFF
@@ -55,4 +55,58 @@ INIT REF
 - BEACON --> ON
 ** CHKL 2
 这时候可以全选
-* TODO PUSHBACK/ENGINE START
+* PUSHBACK/ENGINE START
+Ipad: Wheel Chocks Remove
+** PANEL
+- START L ENGINE --> START L FUEL CONTROL --> RUN
+- START R ENGINE --> START R FUEL CONTROL --> RUN
+* TAXI
+FLAP --> 5
+** PANEL
+- APU --> OFF
+这阶段除TACS外应该无任何警告
+** CHKL
+全选
+** PANEL 2
+- TAXI LIGHT --> ON
+* TAKEOFF
+** PANEL
+- LANDINT LIGNT --> ON x3
+- RUNWAY TRUNOFF LIGHT--> ON L R
+- STROBE --> ON
+- LOGO --> ON(NIGHT)
+油门推到N1线条对准EGT最大刻度，这样大约是55%，机轮收起，起飞后空速表绿色数字超过数字5，指针指向1 FLAP --> 1，超过1 FLAP --> 0
+** CHKL
+完成
+** PANEL
+到达一万英尺时，修正海压 --> STD
+- LANDING --> OFF x3
+- RUNWAY TURNOFF L R --> OFF
+- TAXI --> OFF
+- NO SMOKING --> OFF --> ON
+- SEAT BELTS --> AUTO
+* TODO LANDING
+- ALTITLDE --> 起始进近高度
+** CDU
+- PROG: TOTALFUEL 减去 DEST FUEL 等于降落时燃油总量 1.5
+- INIT REF: GROSS WT 减去 降落时燃油总量覆写 GROSS WT
+- IPad: 计算 Landing Enroute
+- APPROACH REF 按需选择 FLAP/SPEED AUTOBREAK
+- NAV RAD 确认 ILS
+- BARO 从航图上看然后设定
+- LEGS: 复制跑道航路点
+- FIX: 粘贴跑到航路点 /15 /10 /6
+- FLAP: 15 --> 1-5 10 --> 5-15 6 --> 15-20-30
+- 快到一万时，重设海压
+- CHKL: DONE
+** PANEL
+一万英尺后
+- SEAT BELTS: ON
+- LANDING: ON x3
+- RUNWAY TURNOFF L R --> ON
+- TAXI --> ON
+- 准备 FLAP 自动驾驶仪 APP --> ON FLAP 完成后放下机轮
+- CHKL: DONE
+- SPEED BRAKE --> ARMED
+- 计算最终降落速度
+关闭自动驾驶，轻柔的抬起一点点头接地。打开后推，70节以后关闭后推，刹车
