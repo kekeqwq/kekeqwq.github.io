@@ -4,7 +4,11 @@
 #+filetags: flightsim msfs boeing
 
 #+begin_quote
-ref: https://www.bilibili.com/video/BV13H4y1w73x
+ref:
+
+https://www.bilibili.com/video/BV13H4y1w73x
+
+https://www.youtube.com/watch?v=lfPZjLHnRpg
 #+end_quote
 * COLD DARK START
 ** PANEL 1
@@ -85,28 +89,34 @@ FLAP --> 5
 - TAXI --> OFF
 - NO SMOKING --> OFF --> ON
 - SEAT BELTS --> AUTO
-* TODO LANDING
-- ALTITLDE --> 起始进近高度
+* LANDING
+- MAP: T/D --> ALTITLDE --> 起始进近高度
 ** CDU
-- PROG: TOTALFUEL 减去 DEST FUEL 等于降落时燃油总量 1.5
-- INIT REF: GROSS WT 减去 降落时燃油总量覆写 GROSS WT
 - IPad: 计算 Landing Enroute
-- APPROACH REF 按需选择 FLAP/SPEED AUTOBREAK
-- NAV RAD 确认 ILS
-- BARO 从航图上看然后设定
-- LEGS: 复制跑道航路点
-- FIX: 粘贴跑到航路点 /15 /10 /6
-- FLAP: 15 --> 1-5 10 --> 5-15 6 --> 15-20-30
+- APPROACH REF 按需选择 GROSS WT（iPad 计算:Weight） FLAP/SPEED（粘贴） AUTOBREAK（设定）
+- NAV RAD 确认 ILS（按航图，接近时）
+- BARO 从航图（DA/H）上看然后设定
 - 快到一万时，重设海压
 - CHKL: DONE
+#+begin_quote
+如果高度下降太慢：
+- 打开自动驾驶仪FLCH模式，设定IAS到最终降落高度，也可以打开减速板
+#+end_quote
 ** PANEL
 一万英尺后
 - SEAT BELTS: ON
 - LANDING: ON x3
 - RUNWAY TURNOFF L R --> ON
 - TAXI --> ON
+#+begin_quote
+准备flap小技巧:
+- LEGS: 复制跑道航路点
+- FIX: 粘贴跑道航路点 /15 /10 /6
+- FLAP: 15 --> 1-5 10 --> 5-15 6 --> 15-20-30
+#+end_quote
 - 准备 FLAP 自动驾驶仪 APP --> ON FLAP 完成后放下机轮
 - CHKL: DONE
 - SPEED BRAKE --> ARMED
-- 计算最终降落速度
-关闭自动驾驶，轻柔的抬起一点点头接地。打开后推，70节以后关闭后推，刹车
+#+begin_quote
+当已经对准跑道而且快要接近的时候，关闭自动驾驶，轻柔的抬起一点点头接地。打开后推，70节以后关闭后推，刹车
+#+end_quote
