@@ -98,10 +98,7 @@ FLAP --> 5
 - BARO 从航图（DA/H）上看然后设定
 - 快到一万时，重设海压
 - CHKL: DONE
-#+begin_quote
-如果高度下降太慢：
-- 打开自动驾驶仪FLCH模式，设定IAS到最终降落高度，也可以打开减速板
-#+end_quote
+- 打开自动驾驶仪FLCH模式，按需打开减速板
 ** PANEL
 一万英尺后
 - SEAT BELTS: ON
@@ -114,9 +111,11 @@ FLAP --> 5
 - FIX: 粘贴跑道航路点 /15 /10 /6
 - FLAP: 15 --> 1-5 10 --> 5-15 6 --> 15-20-30
 #+end_quote
-- 准备 FLAP 自动驾驶仪 APP --> ON FLAP 完成后放下机轮
-- CHKL: DONE
+- 准备 FLAP，IAS根据FLAP进行设定，当FLAP结束设定，IAS --> 降落高度
+- 放下机轮
+- 自动驾驶仪 APP --> ON
 - SPEED BRAKE --> ARMED
+- CHKL: DONE
 #+begin_quote
 当已经对准跑道而且快要接近的时候，关闭自动驾驶，轻柔的抬起一点点头接地。打开后推，70节以后关闭后推，刹车
 #+end_quote
