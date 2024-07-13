@@ -6,7 +6,7 @@
       type="application/rss+xml"
       href="./rss.xml"
       title="RSS feed for ">
-<title>K</title>
+<title>Ανώνυμο ιστολόγιο</title>
 
           <meta name="author" content="k">
           <meta name="referrer" content="no-referrer">
@@ -17,13 +17,138 @@
 <body>
 <div id="preamble" class="status">
           <div class="header">
-              <a href="index.html">homepage</a>
-              <a href="archive.html">all posts</a>
+              <a href="index.html">HOMEPAGE 🏠 /</a>
+              <a href="archive.html">ALL POSTS 📄 /</a>
+              <a href="tags.html">ALL POSTS BY TAGS 🏷</a>
           </div>
 </div>
 <div id="content">
-<h1> Welcome to my blog </h1>
+<h1>Ανώνυμο ιστολόγιο</h1>
 
+<div class="post-date">13 Jul 2024</div><h1 class="post-title"><a href="./2024-07-13-fenix-simulations-–-airbus-a320.html">Fenix Simulations – Airbus A320</a></h1>
+<blockquote>
+<p>
+ref:
+</p>
+
+<p>
+<a href="https://www.bilibili.com/video/BV1VZ4y1t7L7">https://www.bilibili.com/video/BV1VZ4y1t7L7</a>
+</p>
+</blockquote>
+<div id="outline-container-orgcfe5f37" class="outline-2">
+<h2 id="orgcfe5f37">COLD DARK START</h2>
+<div class="outline-text-2" id="text-orgcfe5f37">
+</div>
+<div id="outline-container-org9e4b96d" class="outline-3">
+<h3 id="org9e4b96d">PANEL</h3>
+<div class="outline-text-3" id="text-org9e4b96d">
+<ul class="org-ul">
+<li>BAT 1 2 &#x2013;&gt; ON</li>
+<li>EXT PWR &#x2013;&gt; ON</li>
+<li>APU MASTER SW &#x2013;&gt; ON &#x2013;&gt; (&#x2026;3s) &#x2013;&gt; START &#x2013;&gt; ON</li>
+<li>APU BLEED &#x2013;&gt; ON (稍等一会 PACK 1/2 FAULT 消失)</li>
+<li>NAV &amp; LOGO &#x2013;&gt; 1</li>
+<li>CREW SUPPLY &#x2013;&gt; ON</li>
+<li>GND CTL &#x2013;&gt; ON</li>
+<li>CVR TEST &#x2013;&gt; 长按到听见滴声</li>
+<li>ADR 1 ADR 2 ADR 3 &#x2013;&gt; NAV</li>
+<li>EMER EXIT LT &#x2013;&gt; ARM</li>
+<li>NO SOMKING &#x2013;&gt; ON</li>
+<li>SEAT BELTS &#x2013;&gt; ON</li>
+</ul>
+<p>
+现在可以上客
+</p>
+</div>
+<ul class="org-ul">
+<li><a id="orgf10de1d"></a>MCDU<br></li>
+</ul>
+<div id="outline-container-org8cb6ef9" class="outline-4">
+<h4 id="org8cb6ef9">ATSU</h4>
+<div class="outline-text-4" id="text-org8cb6ef9">
+<ul class="org-ul">
+<li>AOC MENU &#x2013;&gt; FLT INIT &#x2013;&gt; INIT DATA REQ</li>
+<li>AOC MENU &#x2013;&gt; WX &#x2013;&gt; WEATHER REQ &#x2013;&gt; 起飞机场 &#x2013;&gt; IDENT &#x2013;&gt; METAR &lt;Y&gt; &#x2013;&gt; SEND</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4a6ba9d" class="outline-4">
+<h4 id="org4a6ba9d">FMGC</h4>
+<div class="outline-text-4" id="text-org4a6ba9d">
+<ul class="org-ul">
+<li>INIT REQUEST &#x2013;&gt; FLT NBR &#x2013;&gt; COST INDEX(CI*) &#x2013;&gt; CRZ/TEMP(FL STEPS)</li>
+<li>F-PLN &#x2013;&gt; 起飞机场 &#x2013;&gt; DEPARTURE &#x2013;&gt; INSERT &#x2013;&gt; 到达机场 &#x2013;&gt; ARRIVAL &#x2013;&gt; INSERT</li>
+<li>INIT WIND &#x2013;&gt; WIND REQUEST &#x2013;&gt; UPLINK INSERT</li>
+<li>PERF &#x2013;&gt; 计算之后直接发送到 MCDU</li>
+<li>根据天气设定修正海压包括下方旋钮也要设定</li>
+<li>VOR 1 2</li>
+<li>设定巡航高度</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3a01eb6" class="outline-4">
+<h4 id="org3a01eb6">PANEL</h4>
+<div class="outline-text-4" id="text-org3a01eb6">
+<ul class="org-ul">
+<li>PUMP x6 &#x2013;&gt; ON</li>
+<li>SEAT BELTS &#x2013;&gt; ON</li>
+<li>EXT PWR &#x2013;&gt; OFF</li>
+<li>GPU &#x2013;&gt; OFF</li>
+<li>DOOR CLOSED</li>
+<li>BEACON &#x2013;&gt; ON</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org2e38b4e" class="outline-2">
+<h2 id="org2e38b4e">PUSHBACK &amp; TAXING</h2>
+<div class="outline-text-2" id="text-org2e38b4e">
+<ul class="org-ul">
+<li>ENG MODE &#x2013;&gt; IGN START</li>
+<li>ENG 2 1 &#x2013;&gt; ON</li>
+<li>NOSE &#x2013;&gt; TAXI</li>
+<li>ENG MODE &#x2013;&gt; NORM</li>
+<li>APU BLEED &#x2013;&gt; OFF</li>
+<li>APU MASTER SW &#x2013;&gt; OFF</li>
+<li>SET CG</li>
+<li>SET FLAPS</li>
+<li>AUTO BRK &#x2013;&gt; MAX</li>
+<li>SPLRS &#x2013;&gt; ARM</li>
+</ul>
+</div>
+<div id="outline-container-org69543b8" class="outline-3">
+<h3 id="org69543b8">PANEL</h3>
+<div class="outline-text-3" id="text-org69543b8">
+<ul class="org-ul">
+<li>STORBE &#x2013;&gt; ON</li>
+<li>NOSE &#x2013;&gt; TO</li>
+<li>LAND LR &#x2013;&gt; ON</li>
+<li>RWY TURN &#x2013;&gt; ON</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org70f5d4c" class="outline-2">
+<h2 id="org70f5d4c">TAKEOFF</h2>
+<div class="outline-text-2" id="text-org70f5d4c">
+<ul class="org-ul">
+<li>刹住车油门 &#x2013;&gt; 50%稳定 松刹车 &#x2013;&gt; FLX/CT</li>
+<li>微微压住机头 &#x2013;&gt; 80节放平 &#x2013;&gt; V1 微微抬起</li>
+<li>打开自动驾驶收轮当左上角提示CLB时油门 &#x2013;&gt; CLB</li>
+<li>速度到达S提示，收FLAPS</li>
+<li>NOSE &#x2013;&gt; OFF</li>
+<li>RWY TURN &#x2013;&gt; OFF</li>
+<li>SPLPS &#x2013;&gt; UNARM</li>
+<li>一万英尺后 LAND &#x2013;&gt; OFF 修正海压 &#x2013;&gt; STD</li>
+<li>如果管制要求高度限定，按照要求设定高度然后使用开放模式，否则按照航图使用管理模式（圆点）</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgbf2badb" class="outline-2">
+<h2 id="orgbf2badb"><span class="todo TODO">TODO</span> LANDING</h2>
+</div>
+<div class="taglist"><a href="./tags.html">Tags</a>: <a href="./tag-flightsim.html">flightsim</a> </div>
 <div class="post-date">06 Jul 2024</div><h1 class="post-title"><a href="./2024-07-06-pmdg-–-boeing-777–300er.html">PMDG – Boeing 777–300ER</a></h1>
 <blockquote>
 <p>
@@ -38,22 +163,22 @@ ref:
 <a href="https://www.youtube.com/watch?v=lfPZjLHnRpg">https://www.youtube.com/watch?v=lfPZjLHnRpg</a>
 </p>
 </blockquote>
-<div id="outline-container-org933f8dd" class="outline-2">
-<h2 id="org933f8dd">COLD DARK START</h2>
-<div class="outline-text-2" id="text-org933f8dd">
+<div id="outline-container-orgdd1051a" class="outline-2">
+<h2 id="orgdd1051a">COLD DARK START</h2>
+<div class="outline-text-2" id="text-orgdd1051a">
 </div>
-<div id="outline-container-org475ee52" class="outline-3">
-<h3 id="org475ee52">PANEL 1</h3>
-<div class="outline-text-3" id="text-org475ee52">
+<div id="outline-container-orgd68b902" class="outline-3">
+<h3 id="orgd68b902">PANEL 1</h3>
+<div class="outline-text-3" id="text-orgd68b902">
 <ul class="org-ul">
 <li>IPAD:呼叫地勤接通地面电源</li>
 <li>PANEL:打开 BATTERY 'PRIMARY EXT PWR' 'SECONDARY EXT PWR' 'ADIRU'</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org787f0c5" class="outline-3">
-<h3 id="org787f0c5">CDU</h3>
-<div class="outline-text-3" id="text-org787f0c5">
+<div id="outline-container-org528c192" class="outline-3">
+<h3 id="org528c192">CDU</h3>
+<div class="outline-text-3" id="text-org528c192">
 <ul class="org-ul">
 <li>POS INIT: GPS POS &#x2013;&gt; SET INERTIAL POS 输入起飞机场 &#x2013;&gt; REF AIRPORT</li>
 <li>ROUTE: ROUTE REQUEST &#x2013;&gt; SIMBRIEF &#x2013;&gt; SET PAYLOAD &#x2013;&gt; SET FUEL &#x2013;&gt; SELECT RTE (Wait REQUEST SENT) &#x2013;&gt; LOAD &#x2013;&gt; ACTIVATE &#x2013;&gt; EXEC</li>
@@ -71,9 +196,9 @@ FMC COMM: DES FORECAST &#x2013;&gt; LOAD &#x2013;&gt; FORECAST REQUEST
 </ul>
 </div>
 </div>
-<div id="outline-container-org4bec274" class="outline-3">
-<h3 id="org4bec274">PANEL 2</h3>
-<div class="outline-text-3" id="text-org4bec274">
+<div id="outline-container-org6d5617d" class="outline-3">
+<h3 id="org6d5617d">PANEL 2</h3>
+<div class="outline-text-3" id="text-org6d5617d">
 <ul class="org-ul">
 <li>打开 'IFE/PASS SEATS' 'CABIN UNILITY'</li>
 <li>'EMER LIGHTS' &#x2013;&gt; ARMED</li>
@@ -87,9 +212,9 @@ FMC COMM: DES FORECAST &#x2013;&gt; LOAD &#x2013;&gt; FORECAST REQUEST
 </ul>
 </div>
 </div>
-<div id="outline-container-org0370a5c" class="outline-3">
-<h3 id="org0370a5c">FRONT PANEL</h3>
-<div class="outline-text-3" id="text-org0370a5c">
+<div id="outline-container-org4f275f0" class="outline-3">
+<h3 id="org4f275f0">FRONT PANEL</h3>
+<div class="outline-text-3" id="text-org4f275f0">
 <ul class="org-ul">
 <li>IPad 计算起飞性能后设定修正海压</li>
 <li>EFIS 设定为 10nm TFC APRT TER 开</li>
@@ -101,18 +226,18 @@ FMC COMM: DES FORECAST &#x2013;&gt; LOAD &#x2013;&gt; FORECAST REQUEST
 </ul>
 </div>
 </div>
-<div id="outline-container-org5d29cc0" class="outline-3">
-<h3 id="org5d29cc0">CHKL</h3>
-<div class="outline-text-3" id="text-org5d29cc0">
+<div id="outline-container-org04a64b5" class="outline-3">
+<h3 id="org04a64b5">CHKL</h3>
+<div class="outline-text-3" id="text-org04a64b5">
 <ul class="org-ul">
 <li>Packing brake &#x2013;&gt; 捏住刹车自动感应</li>
 <li>OTHER &#x2013;&gt; ✔</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc153565" class="outline-3">
-<h3 id="orgc153565">CDU 2</h3>
-<div class="outline-text-3" id="text-orgc153565">
+<div id="outline-container-org6964e75" class="outline-3">
+<h3 id="org6964e75">CDU 2</h3>
+<div class="outline-text-3" id="text-org6964e75">
 <p>
 INIT REF
 </p>
@@ -124,9 +249,9 @@ INIT REF
 </ul>
 </div>
 </div>
-<div id="outline-container-orga82d853" class="outline-3">
-<h3 id="orga82d853">PANEL 3</h3>
-<div class="outline-text-3" id="text-orga82d853">
+<div id="outline-container-org6e5f8a6" class="outline-3">
+<h3 id="org6e5f8a6">PANEL 3</h3>
+<div class="outline-text-3" id="text-org6e5f8a6">
 <ul class="org-ul">
 <li>APU &#x2013;&gt; 长按到 START 然后会自动回跳到 ON 稍等确认提示 APU RUNNING</li>
 <li>关门</li>
@@ -140,25 +265,25 @@ INIT REF
 </ul>
 </div>
 </div>
-<div id="outline-container-orge01a027" class="outline-3">
-<h3 id="orge01a027">CHKL 2</h3>
-<div class="outline-text-3" id="text-orge01a027">
+<div id="outline-container-org62942fa" class="outline-3">
+<h3 id="org62942fa">CHKL 2</h3>
+<div class="outline-text-3" id="text-org62942fa">
 <p>
 这时候可以全选
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org9cdf756" class="outline-2">
-<h2 id="org9cdf756">PUSHBACK/ENGINE START</h2>
-<div class="outline-text-2" id="text-org9cdf756">
+<div id="outline-container-org372e7a0" class="outline-2">
+<h2 id="org372e7a0">PUSHBACK/ENGINE START</h2>
+<div class="outline-text-2" id="text-org372e7a0">
 <p>
 Ipad: Wheel Chocks Remove
 </p>
 </div>
-<div id="outline-container-org188f7aa" class="outline-3">
-<h3 id="org188f7aa">PANEL</h3>
-<div class="outline-text-3" id="text-org188f7aa">
+<div id="outline-container-org347f2f0" class="outline-3">
+<h3 id="org347f2f0">PANEL</h3>
+<div class="outline-text-3" id="text-org347f2f0">
 <ul class="org-ul">
 <li>START L ENGINE &#x2013;&gt; START L FUEL CONTROL &#x2013;&gt; RUN</li>
 <li>START R ENGINE &#x2013;&gt; START R FUEL CONTROL &#x2013;&gt; RUN</li>
@@ -166,16 +291,16 @@ Ipad: Wheel Chocks Remove
 </div>
 </div>
 </div>
-<div id="outline-container-org4fc47cd" class="outline-2">
-<h2 id="org4fc47cd">TAXI</h2>
-<div class="outline-text-2" id="text-org4fc47cd">
+<div id="outline-container-orgd5da99e" class="outline-2">
+<h2 id="orgd5da99e">TAXI</h2>
+<div class="outline-text-2" id="text-orgd5da99e">
 <p>
 FLAP &#x2013;&gt; 5
 </p>
 </div>
-<div id="outline-container-org85f1a4e" class="outline-3">
-<h3 id="org85f1a4e">PANEL</h3>
-<div class="outline-text-3" id="text-org85f1a4e">
+<div id="outline-container-orgedc93c2" class="outline-3">
+<h3 id="orgedc93c2">PANEL</h3>
+<div class="outline-text-3" id="text-orgedc93c2">
 <ul class="org-ul">
 <li>APU &#x2013;&gt; OFF</li>
 </ul>
@@ -184,30 +309,30 @@ FLAP &#x2013;&gt; 5
 </p>
 </div>
 </div>
-<div id="outline-container-org15b3cee" class="outline-3">
-<h3 id="org15b3cee">CHKL</h3>
-<div class="outline-text-3" id="text-org15b3cee">
+<div id="outline-container-org945db5e" class="outline-3">
+<h3 id="org945db5e">CHKL</h3>
+<div class="outline-text-3" id="text-org945db5e">
 <p>
 全选
 </p>
 </div>
 </div>
-<div id="outline-container-org7411976" class="outline-3">
-<h3 id="org7411976">PANEL 2</h3>
-<div class="outline-text-3" id="text-org7411976">
+<div id="outline-container-org8f7bcaa" class="outline-3">
+<h3 id="org8f7bcaa">PANEL 2</h3>
+<div class="outline-text-3" id="text-org8f7bcaa">
 <ul class="org-ul">
 <li>TAXI LIGHT &#x2013;&gt; ON</li>
 </ul>
 </div>
 </div>
 </div>
-<div id="outline-container-org2f6af62" class="outline-2">
-<h2 id="org2f6af62">TAKEOFF</h2>
-<div class="outline-text-2" id="text-org2f6af62">
+<div id="outline-container-orgdcc4eda" class="outline-2">
+<h2 id="orgdcc4eda">TAKEOFF</h2>
+<div class="outline-text-2" id="text-orgdcc4eda">
 </div>
-<div id="outline-container-org74a70dd" class="outline-3">
-<h3 id="org74a70dd">PANEL</h3>
-<div class="outline-text-3" id="text-org74a70dd">
+<div id="outline-container-org1471a43" class="outline-3">
+<h3 id="org1471a43">PANEL</h3>
+<div class="outline-text-3" id="text-org1471a43">
 <ul class="org-ul">
 <li>LANDINT LIGNT &#x2013;&gt; ON x3</li>
 <li>RUNWAY TRUNOFF LIGHT&#x2013;&gt; ON L R</li>
@@ -219,17 +344,17 @@ FLAP &#x2013;&gt; 5
 </p>
 </div>
 </div>
-<div id="outline-container-org2fca315" class="outline-3">
-<h3 id="org2fca315">CHKL</h3>
-<div class="outline-text-3" id="text-org2fca315">
+<div id="outline-container-orgec13ef9" class="outline-3">
+<h3 id="orgec13ef9">CHKL</h3>
+<div class="outline-text-3" id="text-orgec13ef9">
 <p>
 完成
 </p>
 </div>
 </div>
-<div id="outline-container-orgc69b627" class="outline-3">
-<h3 id="orgc69b627">PANEL</h3>
-<div class="outline-text-3" id="text-orgc69b627">
+<div id="outline-container-orgc386c66" class="outline-3">
+<h3 id="orgc386c66">PANEL</h3>
+<div class="outline-text-3" id="text-orgc386c66">
 <p>
 到达一万英尺时，修正海压 &#x2013;&gt; STD
 </p>
@@ -243,16 +368,16 @@ FLAP &#x2013;&gt; 5
 </div>
 </div>
 </div>
-<div id="outline-container-org69a0758" class="outline-2">
-<h2 id="org69a0758">LANDING</h2>
-<div class="outline-text-2" id="text-org69a0758">
+<div id="outline-container-orgae6e902" class="outline-2">
+<h2 id="orgae6e902">LANDING</h2>
+<div class="outline-text-2" id="text-orgae6e902">
 <ul class="org-ul">
 <li>MAP: T/D &#x2013;&gt; ALTITLDE &#x2013;&gt; 起始进近高度</li>
 </ul>
 </div>
-<div id="outline-container-orgfd84057" class="outline-3">
-<h3 id="orgfd84057">CDU</h3>
-<div class="outline-text-3" id="text-orgfd84057">
+<div id="outline-container-orgc983c8f" class="outline-3">
+<h3 id="orgc983c8f">CDU</h3>
+<div class="outline-text-3" id="text-orgc983c8f">
 <ul class="org-ul">
 <li>IPad: 计算 Landing Enroute</li>
 <li>APPROACH REF 按需选择 GROSS WT（iPad 计算:Weight） FLAP/SPEED（粘贴） AUTOBREAK（设定）</li>
@@ -271,9 +396,9 @@ FLAP &#x2013;&gt; 5
 </blockquote>
 </div>
 </div>
-<div id="outline-container-org6c04f90" class="outline-3">
-<h3 id="org6c04f90">PANEL</h3>
-<div class="outline-text-3" id="text-org6c04f90">
+<div id="outline-container-org12e063e" class="outline-3">
+<h3 id="org12e063e">PANEL</h3>
+<div class="outline-text-3" id="text-org12e063e">
 <p>
 一万英尺后
 </p>
@@ -306,11 +431,11 @@ FLAP &#x2013;&gt; 5
 </div>
 </div>
 </div>
-<div class="taglist"><a href="./tags.html">Tags</a>: <a href="./tag-flightsim.html">flightsim</a> <a href="./tag-msfs.html">msfs</a> <a href="./tag-boeing.html">boeing</a> </div>
+<div class="taglist"><a href="./tags.html">Tags</a>: <a href="./tag-flightsim.html">flightsim</a> </div>
 <div class="post-date">13 Jun 2024</div><h1 class="post-title"><a href="./2024-06-13-archlinux-with-bcachefs-efibootmgr.html">archlinux with bcachefs efibootmgr</a></h1>
-<div id="outline-container-org6f5dea8" class="outline-2">
-<h2 id="org6f5dea8"><span class="todo TODO">TODO</span> Need collate</h2>
-<div class="outline-text-2" id="text-org6f5dea8">
+<div id="outline-container-org7befecb" class="outline-2">
+<h2 id="org7befecb"><span class="todo TODO">TODO</span> Need collate</h2>
+<div class="outline-text-2" id="text-org7befecb">
 <div class="org-src-container">
 <pre class="src src-shell">100m esp for /boot/efi
 bcachefs format --fs_label=ArchLinux --compression=zstd /dev/sda2
@@ -354,18 +479,18 @@ homectl create keke --member-of=wheel --shell=/bin/fish --storage=luks --fs-type
 </div>
 </div>
 
-<div id="outline-container-orge75bd99" class="outline-2">
-<h2 id="orge75bd99">Install Nvidia-open</h2>
-<div class="outline-text-2" id="text-orge75bd99">
+<div id="outline-container-org32feb1f" class="outline-2">
+<h2 id="org32feb1f">Install Nvidia-open</h2>
+<div class="outline-text-2" id="text-org32feb1f">
 <p>
 ref. <a href="https://linuxiac.com/nvidia-with-wayland-on-arch-setup-guide/">https://linuxiac.com/nvidia-with-wayland-on-arch-setup-guide/</a>
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgd1ee28f" class="outline-2">
-<h2 id="orgd1ee28f"><span class="todo TODO">TODO</span> Wayfire need fix</h2>
-<div class="outline-text-2" id="text-orgd1ee28f">
+<div id="outline-container-orgf3bd14b" class="outline-2">
+<h2 id="orgf3bd14b"><span class="todo TODO">TODO</span> Wayfire need fix</h2>
+<div class="outline-text-2" id="text-orgf3bd14b">
 <p>
 use <a href="https://www.archlinuxcn.org/archlinux-cn-repo-and-mirror/">https://www.archlinuxcn.org/archlinux-cn-repo-and-mirror/</a>
 then <code>sudo pacman -S wayfire-lily-git</code>
@@ -615,13 +740,13 @@ II 02-06-24 19:10:12.215 - [build/wayfire/src/main.cpp:491] Shutdown successful!
 <div class="taglist"><a href="./tags.html">Tags</a>: <a href="./tag-tutorial.html">tutorial</a> </div>
 <div class="post-date">13 Jun 2024</div><h1 class="post-title"><a href="./2024-06-13-use-lute-v3.html">use lute v3</a></h1>
 
-<div id="outline-container-org4ac9ad9" class="outline-2">
-<h2 id="org4ac9ad9">Install lute</h2>
-<div class="outline-text-2" id="text-org4ac9ad9">
+<div id="outline-container-org27ea862" class="outline-2">
+<h2 id="org27ea862">Install lute</h2>
+<div class="outline-text-2" id="text-org27ea862">
 </div>
-<div id="outline-container-orge84fba4" class="outline-3">
-<h3 id="orge84fba4">Useing venv</h3>
-<div class="outline-text-3" id="text-orge84fba4">
+<div id="outline-container-org58779e1" class="outline-3">
+<h3 id="org58779e1">Useing venv</h3>
+<div class="outline-text-3" id="text-org58779e1">
 <p>
 Create a folder and enter it to create a Python virtual environment.
 </p>
@@ -634,18 +759,18 @@ Execute the activation script in the <code>envlute\Scripts</code> folder accordi
 </p>
 </div>
 </div>
-<div id="outline-container-org4badcf7" class="outline-3">
-<h3 id="org4badcf7">Install via pip</h3>
-<div class="outline-text-3" id="text-org4badcf7">
+<div id="outline-container-orgd6eced4" class="outline-3">
+<h3 id="orgd6eced4">Install via pip</h3>
+<div class="outline-text-3" id="text-orgd6eced4">
 <div class="org-src-container">
 <pre class="src src-shell">pip install lute3
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org39581be" class="outline-3">
-<h3 id="org39581be">Starting in a virtual environment</h3>
-<div class="outline-text-3" id="text-org39581be">
+<div id="outline-container-org50f40eb" class="outline-3">
+<h3 id="org50f40eb">Starting in a virtual environment</h3>
+<div class="outline-text-3" id="text-org50f40eb">
 <div class="org-src-container">
 <pre class="src src-shell">python -m lute.main
 </pre>
@@ -653,26 +778,26 @@ Execute the activation script in the <code>envlute\Scripts</code> folder accordi
 </div>
 </div>
 </div>
-<div id="outline-container-org16ca155" class="outline-2">
-<h2 id="org16ca155">Use lute</h2>
-<div class="outline-text-2" id="text-org16ca155">
+<div id="outline-container-org4efa925" class="outline-2">
+<h2 id="org4efa925">Use lute</h2>
+<div class="outline-text-2" id="text-org4efa925">
 </div>
-<div id="outline-container-org87b3bcc" class="outline-3">
-<h3 id="org87b3bcc">Update</h3>
-<div class="outline-text-3" id="text-org87b3bcc">
+<div id="outline-container-orge97326b" class="outline-3">
+<h3 id="orge97326b">Update</h3>
+<div class="outline-text-3" id="text-orge97326b">
 <div class="org-src-container">
 <pre class="src src-shell">pip install --upgrade lute3
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org47bbace" class="outline-3">
-<h3 id="org47bbace">Config</h3>
-<div class="outline-text-3" id="text-org47bbace">
+<div id="outline-container-orgcf61cd1" class="outline-3">
+<h3 id="orgcf61cd1">Config</h3>
+<div class="outline-text-3" id="text-orgcf61cd1">
 </div>
-<div id="outline-container-orgf4062c7" class="outline-4">
-<h4 id="orgf4062c7">Dicts</h4>
-<div class="outline-text-4" id="text-orgf4062c7">
+<div id="outline-container-org1e4755c" class="outline-4">
+<h4 id="org1e4755c">Dicts</h4>
+<div class="outline-text-4" id="text-org1e4755c">
 <table>
 
 
@@ -711,9 +836,9 @@ Execute the activation script in the <code>envlute\Scripts</code> folder accordi
 </table>
 </div>
 </div>
-<div id="outline-container-org635bcc2" class="outline-4">
-<h4 id="org635bcc2">Custom styles</h4>
-<div class="outline-text-4" id="text-org635bcc2">
+<div id="outline-container-orgdd60b21" class="outline-4">
+<h4 id="orgdd60b21">Custom styles</h4>
+<div class="outline-text-4" id="text-orgdd60b21">
 <div class="org-src-container">
 <pre class="src src-css">/* Custom css to modify Lute's appearance. */
 body {
@@ -732,6 +857,6 @@ body {
 <a href="./archive.html">Other posts</a>
 </div>
 </div>
-<div id="postamble" class="status"><center>kkk@2024</center></div>
+<div id="postamble" class="status"><center>ανώνυμο πρόσωπο@2024</center></div>
 </body>
 </html>

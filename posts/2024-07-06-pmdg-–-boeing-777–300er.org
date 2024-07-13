@@ -1,7 +1,7 @@
 #+title: PMDG – Boeing 777–300ER
 #+date: <2024-07-06 18:31>
-#+description: 
-#+filetags: flightsim msfs boeing
+#+description: pmdg 777 quickstart
+#+filetags: flightsim
 
 #+begin_quote
 ref:

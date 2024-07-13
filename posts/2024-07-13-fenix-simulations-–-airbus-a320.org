@@ -1,0 +1,71 @@
+#+title: Fenix Simulations – Airbus A320
+#+date: <2024-07-13 20:52>
+#+description: fenix a320 quick start
+#+filetags: flightsim
+
+#+begin_quote
+ref:
+
+https://www.bilibili.com/video/BV1VZ4y1t7L7
+#+end_quote
+* COLD DARK START
+** PANEL
+- BAT 1 2 --> ON
+- EXT PWR --> ON
+- APU MASTER SW --> ON --> (...3s) --> START --> ON
+- APU BLEED --> ON (稍等一会 PACK 1/2 FAULT 消失)
+- NAV & LOGO --> 1
+- CREW SUPPLY --> ON
+- GND CTL --> ON
+- CVR TEST --> 长按到听见滴声
+- ADR 1 ADR 2 ADR 3 --> NAV
+- EMER EXIT LT --> ARM
+- NO SOMKING --> ON
+- SEAT BELTS --> ON
+现在可以上客
+**** MCDU
+*** ATSU
+- AOC MENU --> FLT INIT --> INIT DATA REQ
+- AOC MENU --> WX --> WEATHER REQ --> 起飞机场 --> IDENT --> METAR <Y> --> SEND
+*** FMGC
+- INIT REQUEST --> FLT NBR --> COST INDEX(CI*) --> CRZ/TEMP(FL STEPS)
+- F-PLN --> 起飞机场 --> DEPARTURE --> INSERT --> 到达机场 --> ARRIVAL --> INSERT
+- INIT WIND --> WIND REQUEST --> UPLINK INSERT
+- PERF --> 计算之后直接发送到 MCDU
+- 根据天气设定修正海压包括下方旋钮也要设定
+- VOR 1 2
+- 设定巡航高度
+*** PANEL
+- PUMP x6 --> ON
+- SEAT BELTS --> ON
+- EXT PWR --> OFF
+- GPU --> OFF
+- DOOR CLOSED
+- BEACON --> ON
+* PUSHBACK & TAXING
+- ENG MODE --> IGN START
+- ENG 2 1 --> ON
+- NOSE --> TAXI
+- ENG MODE --> NORM
+- APU BLEED --> OFF
+- APU MASTER SW --> OFF
+- SET CG
+- SET FLAPS
+- AUTO BRK --> MAX
+- SPLRS --> ARM
+** PANEL
+- STORBE --> ON
+- NOSE --> TO
+- LAND LR --> ON
+- RWY TURN --> ON
+* TAKEOFF
+- 刹住车油门 --> 50%稳定 松刹车 --> FLX/CT
+- 微微压住机头 --> 80节放平 --> V1 微微抬起
+- 打开自动驾驶收轮当左上角提示CLB时油门 --> CLB
+- 速度到达S提示，收FLAPS
+- NOSE --> OFF
+- RWY TURN --> OFF
+- SPLPS --> UNARM
+- 一万英尺后 LAND --> OFF 修正海压 --> STD
+- 如果管制要求高度限定，按照要求设定高度然后使用开放模式，否则按照航图使用管理模式（圆点）
+* TODO LANDING
