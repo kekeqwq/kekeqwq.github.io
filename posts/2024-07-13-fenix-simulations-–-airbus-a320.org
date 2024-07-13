@@ -64,8 +64,24 @@ https://www.bilibili.com/video/BV1VZ4y1t7L7
 - 打开自动驾驶收轮当左上角提示CLB时油门 --> CLB
 - 速度到达S提示，收FLAPS
 - NOSE --> OFF
+- LAND LR --> OFF
 - RWY TURN --> OFF
 - SPLPS --> UNARM
 - 一万英尺后 LAND --> OFF 修正海压 --> STD
 - 如果管制要求高度限定，按照要求设定高度然后使用开放模式，否则按照航图使用管理模式（圆点）
 * TODO LANDING
+获取到达机场天气
+- PERF --> ADDR 根据天气填写
+- 设定下降高度
+- 一万英尺后调修正海压
+- LAND LR --> ON
+- RWY TURN --> ON
+- 计算降落
+- PERF --> 激活APPR
+- A-TR --> ON
+- AP2 --> ON
+- GO AROUND ENG OUT ACC --> 复飞高度
+- 闪烁 ILS 的时候 LS -- ON
+- 放轮
+- SPLPS --> ARM
+- 降落 收油门 落地 反推
