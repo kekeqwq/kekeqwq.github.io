@@ -44,8 +44,11 @@
 #+end_src
 
 * Install Nvidia-open
-ref. https://linuxiac.com/nvidia-with-wayland-on-arch-setup-guide/
+#+begin_quote
+ref.
 
+https://linuxiac.com/nvidia-with-wayland-on-arch-setup-guide/
+#+end_quote
 * TODO Wayfire need fix
 use https://www.archlinuxcn.org/archlinux-cn-repo-and-mirror/
 then ~sudo pacman -S wayfire-lily-git~

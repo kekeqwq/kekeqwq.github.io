@@ -7,6 +7,8 @@
 ref:
 
 https://www.bilibili.com/video/BV1VZ4y1t7L7
+
+https://www.youtube.com/watch?v=iDOTAJVdU_A
 #+end_quote
 * COLD DARK START
 ** PANEL
@@ -49,7 +51,7 @@ https://www.bilibili.com/video/BV1VZ4y1t7L7
 - ENG MODE --> NORM
 - APU BLEED --> OFF
 - APU MASTER SW --> OFF
-- SET CG
+- SET CG(IPad MASS AND BLANCE 查看，FUEL PRED也要设定)
 - SET FLAPS
 - AUTO BRK --> MAX
 - SPLRS --> ARM
@@ -69,19 +71,42 @@ https://www.bilibili.com/video/BV1VZ4y1t7L7
 - SPLPS --> UNARM
 - 一万英尺后 LAND --> OFF 修正海压 --> STD
 - 如果管制要求高度限定，按照要求设定高度然后使用开放模式，否则按照航图使用管理模式（圆点）
-* TODO LANDING
-获取到达机场天气
+* LANDING
+- 联系空管准备下降设定下降高度获取降落跑道
+#+begin_quote
+如果更换降落跑道则需要先转换为HDG航向模式，更换成功了取消HDG自动返回航线
+#+end_quote
+- PROG CLIMB 页面输入空管指定的巡航高度到达后会进入 CRUISE 页面，临近下降时才可以设定下面
 - PERF --> ADDR 根据天气填写
-- 设定下降高度
+#+begin_quote
+EGLL 2416502 AUTO
+
+31007KT 270V3400 9999 -RA
+
+SCT049///  ///////TCU
+
+16/07 Q1008 NOSIG
+
+此例中，QNH 为 1008 TEMP 为 16 MAG WIND 为 310/7
+
+BARO 为航图中的 DA(H)
+
+转 NEXT PHASE ‘ENG OUT ACC’ 为复飞高度看航图
+#+end_quote
+- 计算降落
+#+begin_quote
+GW 多少 KG 减去 (FOB - EFOB) 等于 LANDING WT
+
+设定自动刹车
+#+end_quote
 - 一万英尺后调修正海压
 - LAND LR --> ON
 - RWY TURN --> ON
-- 计算降落
-- PERF --> 激活APPR
-- A-TR --> ON
-- AP2 --> ON
-- GO AROUND ENG OUT ACC --> 复飞高度
-- 闪烁 ILS 的时候 LS -- ON
+- PERF --> 激活 APPR PHASE（如果没有这个选项说明自动激活了，提前手动激活也可以）
+- PERF --> NEXT PHASE --> GO AROUND PHASE --> 'ENG OUT ACC' --> 复飞高度  
+- 根据空速慢慢放下 FLAPS
+- 闪烁 ILS 的时候自动驾驶面板LS --> ON
 - 放轮
 - SPLPS --> ARM
-- 降落 收油门 落地 反推
+- 接近跑道时关闭自动驾驶
+- 收油门 降落 落地 反推
