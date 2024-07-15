@@ -6,12 +6,48 @@ body{
     font-size: 18px;
     src: url(https://fonts.gstatic.com/s/ibmplexserif/v19/jizAREVNn1dOx-zrZ2X3pZvkTi2k_iI5q1vxiQ.woff2) format('woff2');
 }
-a {
-    font-size: 23px;
-    background-color: #EDDD6E;
+
+#table-of-contents a {
+    color: #f2ecde;
+}
+
+#table-of-contents a:hover {
+    background-color: #d597ce;
+}
+
+#table-of-contents a span {
+    color: #50616d;
+    background-color: initial;
+}
+
+#table-of-contents h2 {
+    background-color: #ffcab0;
+    color: #745c97;
+}
+
+#table-of-contents {
+    background: #745c97;
+    padding-bottom: 1rem !important;
+}
+
+#table-of-contents li ul li ul li ul li a {
+    padding: 0.4045em 4.036em;
+    overflow: auto;
+}
+
+#table-of-contents li ul li ul li ul li ul li a {
+    padding: 0.4045em 4.736em;
+    overflow: auto;
 }
 
 .todo {
     font-size: 25px;
     background-color: #FF0000;
+}
+
+blockquote,.src {
+    text-shadow: 0px 0px 0px;
+    box-shadow: 1px 1px 5px #50616d;
+    color: #50616d;
+    background-color: #fef8de;
 }

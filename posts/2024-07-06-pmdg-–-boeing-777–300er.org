@@ -112,6 +112,9 @@ FLAP --> 5
 - FLAP: 15 --> 1-5 10 --> 5-15 6 --> 15-20-30
 #+end_quote
 - 准备 FLAP，IAS根据FLAP进行设定，当FLAP结束设定，IAS --> 降落高度
+#+begin_quote
+FLAP UP --> IAS UP FLAP 1 --> IAS 1 ...
+#+end_quote
 - 放下机轮
 - 自动驾驶仪 APP --> ON
 - SPEED BRAKE --> ARMED
