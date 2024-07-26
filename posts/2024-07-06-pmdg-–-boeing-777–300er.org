@@ -3,6 +3,8 @@
 #+description: pmdg 777 quickstart
 #+filetags: flightsim
 
+PMDG 777-300ER for Microsoft Flight Simulator
+
 #+begin_quote
 ref:
 

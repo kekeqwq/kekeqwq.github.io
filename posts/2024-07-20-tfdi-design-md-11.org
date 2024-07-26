@@ -1,0 +1,45 @@
+#+title: TFDi Design MD-11
+#+date: <2024-07-20 17:06>
+#+description: MD-11 quickstart
+#+filetags: flightsim
+
+TFDi Design MD-11 for Microsoft Flight Simulator
+
+* TODO WORK IN PROGRESS
+
+#+begin_quote
+ref.
+
+https://www.youtube.com/watch?v=bCgssW4LqcM
+#+end_quote
+* COLD & DARK START
+** PANEL
+- BAT --> ON
+- EXT PWR --> ON
+- *ENG/APU FIRE TEST
+- EMER LT --> ON
+- SEAT BELTS --> AUTO
+- NO SMOKE --> ON
+- NAV LT --> ON
+- NAV --> 1 2 3
+** FMC
+- SET PAYLOAD & FUEL in IPad
+*** FPLN INIT
+1. FLT NO
+2. CRZ LEVELS
+3. CI
+4. 剩下的自动填写
+*** F-PLN
+- 设定出发/到达跑道
+- 修复不连续
+*** PERF
+**** CLIMB
+- 根据飞行简报 WIND INFORMATION 设定
+*** TO/ADDR
+- 计算起飞数据填写
+- CLB THRUST / ACCEL / EO ACCEL 均为 1500 + 当前海拔
+- 设定 THRUST LIMITS
+** PANEL
+- 校准备用水平仪
+- 设定爬升高度、跑道航向、起始速度
+- 设定自动刹车

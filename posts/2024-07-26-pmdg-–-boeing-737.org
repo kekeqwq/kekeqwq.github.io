@@ -1,0 +1,18 @@
+#+title: PMDG – Boeing 737
+#+date: <2024-07-26 23:51>
+#+description: 737 quick start
+#+filetags: flightsim
+
+The PMDG 737 for Microsoft Flight Simulator
+
+* TODO WORK IN PROGRESS
+#+begin_quote
+ref.
+
+https://www.bilibili.com/video/BV1k8411d7jV
+#+end_quote
+
+* COLD & DARK START
+** PANEL
+- BAT --> ON
+  

@@ -3,6 +3,8 @@
 #+description: 
 #+filetags: tutorial
 
+LUTE = Learning Using Texts: learn languages through reading. Python/Flask.
+
 * Install lute
 ** Useing venv
 Create a folder and enter it to create a Python virtual environment.
