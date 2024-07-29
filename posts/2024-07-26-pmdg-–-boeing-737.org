@@ -15,4 +15,78 @@ https://www.bilibili.com/video/BV1k8411d7jV
 * COLD & DARK START
 ** PANEL
 - BAT --> ON
-  
+- GRD PWR --> ON
+- EMER EXIT LIGHTS --> ARMED
+- SEAT BELTS --> ON
+- APU --> START
+- APU GEN x2 --> ON
+- WINDOW HEAT x4 --> ON
+- APU BLEED --> ON
+- L R PACK --> AUTO
+- IRS L R --> NAV
+** FMC
+*** POS INIT
+- REF --> 起飞机场
+- GPS L --> SET IRS POS
+*** ROUTE
+- FLT PLAN --> REQUEST --> LOAD --> ACTIVATE --> EXEC
+*** DEP ARR
+- 设定起降跑道
+*** PERF INIT
+- PERF INIT --> REQUEST --> LOAD
+- RESERVES --> ~3
+- N1 LIMIT --> 选择合适推力
+- TAKEOFF REF --> FLAPS CG V1 VR V2
+** PANEL
+- 海压
+- FD x2 --> ON
+- A/T --> ARM
+- IAS --> V2
+- HEADING --> 跑道(这个应该不用手动设定)
+- 设定巡航高度
+- YAW DAMPER --> ON
+- FUEL PUMPS x4 --> ON
+- ELEC 2 1 --> ON
+- FLT ALT --> 巡航高度
+- ANTI COLLISION --> ON
+* PUSH & START
+地面电源、门关闭 开始后推启动引擎
+- L R PACK --> OFF
+- ENGINE START 2 --> GRD -- > 25% --> 2 --> IDLE
+- ENGINE START 1 --> GRD -- > 25% --> 1 --> IDLE
+- APU GEN x2 --> OFF
+- PROBE x2 --> ON
+- L R PACK --> AUTO
+- APU BLEED --> OFF
+- APU --> OFF
+* TAXING
+- TRIM SET
+- FLAP SET
+- AUTO BREAK --> RTO
+** PANEL
+- TAXI --> ON
+- VNAV --> ON
+- LNAV --> ON
+* TAKEOFF
+- 应答机 --> TA/RA
+- LANDING --> ON
+- RUNWAY TURNOFF --> ON
+- POSITION --> STEADY & STROBE
+- 压着机头，油门到40，TO/GA 推力，空速80回中，V1 抬轮，收轮
+- CMD --> ON
+- FLAP --> UP
+- RUNWAY TURNOFF --> OFF
+- TAXI --> OFF
+- 一万英尺后 --> LANDING --> OFF 海压 --> STD
+* LANDING
+** PANEL
+- LAND ALT --> 航图 Apt Elev
+** FMC
+计算填写 APPROACH REF，主副中控台上输入 ILS 频率，调整 COURSE
+- PANEL
+- 气压 --> STD
+- AUTOBRAKE SET
+- LANDING --> ON
+- SPEED BREAK --> ARMED
+- 慢慢放 FLAP
+- APP 进近模式

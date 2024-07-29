@@ -29,10 +29,32 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org11d1a53"><span class="todo TODO">TODO</span> WORK IN PROGRESS</a></li>
-<li><a href="#org663303e">COLD &amp; DARK START</a>
+<li><a href="#org94cea3b"><span class="todo TODO">TODO</span> WORK IN PROGRESS</a></li>
+<li><a href="#orgd6e362e">COLD &amp; DARK START</a>
 <ul>
-<li><a href="#org8bd8b15">PANEL</a></li>
+<li><a href="#org2e643df">PANEL</a></li>
+<li><a href="#org33c29ba">FMC</a>
+<ul>
+<li><a href="#orga163854">POS INIT</a></li>
+<li><a href="#orgb695097">ROUTE</a></li>
+<li><a href="#org9168c69">DEP ARR</a></li>
+<li><a href="#org39642a9">PERF INIT</a></li>
+</ul>
+</li>
+<li><a href="#org6b25d06">PANEL</a></li>
+</ul>
+</li>
+<li><a href="#org0933934">PUSH &amp; START</a></li>
+<li><a href="#orgf8bc401">TAXING</a>
+<ul>
+<li><a href="#org24a72d5">PANEL</a></li>
+</ul>
+</li>
+<li><a href="#org6294be4">TAKEOFF</a></li>
+<li><a href="#orgc83c4a0">LANDING</a>
+<ul>
+<li><a href="#org81e53dd">PANEL</a></li>
+<li><a href="#org324b0de">FMC</a></li>
 </ul>
 </li>
 </ul>
@@ -42,9 +64,9 @@
 The PMDG 737 for Microsoft Flight Simulator
 </p>
 
-<div id="outline-container-org11d1a53" class="outline-2">
-<h2 id="org11d1a53"><span class="todo TODO">TODO</span> WORK IN PROGRESS</h2>
-<div class="outline-text-2" id="text-org11d1a53">
+<div id="outline-container-org94cea3b" class="outline-2">
+<h2 id="org94cea3b"><span class="todo TODO">TODO</span> WORK IN PROGRESS</h2>
+<div class="outline-text-2" id="text-org94cea3b">
 <blockquote>
 <p>
 ref.
@@ -57,15 +79,168 @@ ref.
 </div>
 </div>
 
-<div id="outline-container-org663303e" class="outline-2">
-<h2 id="org663303e">COLD &amp; DARK START</h2>
-<div class="outline-text-2" id="text-org663303e">
+<div id="outline-container-orgd6e362e" class="outline-2">
+<h2 id="orgd6e362e">COLD &amp; DARK START</h2>
+<div class="outline-text-2" id="text-orgd6e362e">
 </div>
-<div id="outline-container-org8bd8b15" class="outline-3">
-<h3 id="org8bd8b15">PANEL</h3>
-<div class="outline-text-3" id="text-org8bd8b15">
+<div id="outline-container-org2e643df" class="outline-3">
+<h3 id="org2e643df">PANEL</h3>
+<div class="outline-text-3" id="text-org2e643df">
 <ul class="org-ul">
 <li>BAT &#x2013;&gt; ON</li>
+<li>GRD PWR &#x2013;&gt; ON</li>
+<li>EMER EXIT LIGHTS &#x2013;&gt; ARMED</li>
+<li>SEAT BELTS &#x2013;&gt; ON</li>
+<li>APU &#x2013;&gt; START</li>
+<li>APU GEN x2 &#x2013;&gt; ON</li>
+<li>WINDOW HEAT x4 &#x2013;&gt; ON</li>
+<li>APU BLEED &#x2013;&gt; ON</li>
+<li>L R PACK &#x2013;&gt; AUTO</li>
+<li>IRS L R &#x2013;&gt; NAV</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org33c29ba" class="outline-3">
+<h3 id="org33c29ba">FMC</h3>
+<div class="outline-text-3" id="text-org33c29ba">
+</div>
+<div id="outline-container-orga163854" class="outline-4">
+<h4 id="orga163854">POS INIT</h4>
+<div class="outline-text-4" id="text-orga163854">
+<ul class="org-ul">
+<li>REF &#x2013;&gt; 起飞机场</li>
+<li>GPS L &#x2013;&gt; SET IRS POS</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb695097" class="outline-4">
+<h4 id="orgb695097">ROUTE</h4>
+<div class="outline-text-4" id="text-orgb695097">
+<ul class="org-ul">
+<li>FLT PLAN &#x2013;&gt; REQUEST &#x2013;&gt; LOAD &#x2013;&gt; ACTIVATE &#x2013;&gt; EXEC</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9168c69" class="outline-4">
+<h4 id="org9168c69">DEP ARR</h4>
+<div class="outline-text-4" id="text-org9168c69">
+<ul class="org-ul">
+<li>设定起降跑道</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org39642a9" class="outline-4">
+<h4 id="org39642a9">PERF INIT</h4>
+<div class="outline-text-4" id="text-org39642a9">
+<ul class="org-ul">
+<li>PERF INIT &#x2013;&gt; REQUEST &#x2013;&gt; LOAD</li>
+<li>RESERVES &#x2013;&gt; ~3</li>
+<li>N1 LIMIT &#x2013;&gt; 选择合适推力</li>
+<li>TAKEOFF REF &#x2013;&gt; FLAPS CG V1 VR V2</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org6b25d06" class="outline-3">
+<h3 id="org6b25d06">PANEL</h3>
+<div class="outline-text-3" id="text-org6b25d06">
+<ul class="org-ul">
+<li>海压</li>
+<li>FD x2 &#x2013;&gt; ON</li>
+<li>A/T &#x2013;&gt; ARM</li>
+<li>IAS &#x2013;&gt; V2</li>
+<li>HEADING &#x2013;&gt; 跑道(这个应该不用手动设定)</li>
+<li>设定巡航高度</li>
+<li>YAW DAMPER &#x2013;&gt; ON</li>
+<li>FUEL PUMPS x4 &#x2013;&gt; ON</li>
+<li>ELEC 2 1 &#x2013;&gt; ON</li>
+<li>FLT ALT &#x2013;&gt; 巡航高度</li>
+<li>ANTI COLLISION &#x2013;&gt; ON</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org0933934" class="outline-2">
+<h2 id="org0933934">PUSH &amp; START</h2>
+<div class="outline-text-2" id="text-org0933934">
+<p>
+地面电源、门关闭 开始后推启动引擎
+</p>
+<ul class="org-ul">
+<li>L R PACK &#x2013;&gt; OFF</li>
+<li>ENGINE START 2 &#x2013;&gt; GRD &#x2013; &gt; 25% &#x2013;&gt; 2 &#x2013;&gt; IDLE</li>
+<li>ENGINE START 1 &#x2013;&gt; GRD &#x2013; &gt; 25% &#x2013;&gt; 1 &#x2013;&gt; IDLE</li>
+<li>APU GEN x2 &#x2013;&gt; OFF</li>
+<li>PROBE x2 &#x2013;&gt; ON</li>
+<li>L R PACK &#x2013;&gt; AUTO</li>
+<li>APU BLEED &#x2013;&gt; OFF</li>
+<li>APU &#x2013;&gt; OFF</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf8bc401" class="outline-2">
+<h2 id="orgf8bc401">TAXING</h2>
+<div class="outline-text-2" id="text-orgf8bc401">
+<ul class="org-ul">
+<li>TRIM SET</li>
+<li>FLAP SET</li>
+<li>AUTO BREAK &#x2013;&gt; RTO</li>
+</ul>
+</div>
+<div id="outline-container-org24a72d5" class="outline-3">
+<h3 id="org24a72d5">PANEL</h3>
+<div class="outline-text-3" id="text-org24a72d5">
+<ul class="org-ul">
+<li>TAXI &#x2013;&gt; ON</li>
+<li>VNAV &#x2013;&gt; ON</li>
+<li>LNAV &#x2013;&gt; ON</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org6294be4" class="outline-2">
+<h2 id="org6294be4">TAKEOFF</h2>
+<div class="outline-text-2" id="text-org6294be4">
+<ul class="org-ul">
+<li>应答机 &#x2013;&gt; TA/RA</li>
+<li>LANDING &#x2013;&gt; ON</li>
+<li>RUNWAY TURNOFF &#x2013;&gt; ON</li>
+<li>POSITION &#x2013;&gt; STEADY &amp; STROBE</li>
+<li>压着机头，油门到40，TO/GA 推力，空速80回中，V1 抬轮，收轮</li>
+<li>CMD &#x2013;&gt; ON</li>
+<li>FLAP &#x2013;&gt; UP</li>
+<li>RUNWAY TURNOFF &#x2013;&gt; OFF</li>
+<li>TAXI &#x2013;&gt; OFF</li>
+<li>一万英尺后 &#x2013;&gt; LANDING &#x2013;&gt; OFF 海压 &#x2013;&gt; STD</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc83c4a0" class="outline-2">
+<h2 id="orgc83c4a0">LANDING</h2>
+<div class="outline-text-2" id="text-orgc83c4a0">
+</div>
+<div id="outline-container-org81e53dd" class="outline-3">
+<h3 id="org81e53dd">PANEL</h3>
+<div class="outline-text-3" id="text-org81e53dd">
+<ul class="org-ul">
+<li>LAND ALT &#x2013;&gt; 航图 Apt Elev</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org324b0de" class="outline-3">
+<h3 id="org324b0de">FMC</h3>
+<div class="outline-text-3" id="text-org324b0de">
+<p>
+计算填写 APPROACH REF，主副中控台上输入 ILS 频率，调整 COURSE
+</p>
+<ul class="org-ul">
+<li>PANEL</li>
+<li>气压 &#x2013;&gt; STD</li>
+<li>AUTOBRAKE SET</li>
+<li>LANDING &#x2013;&gt; ON</li>
+<li>SPEED BREAK &#x2013;&gt; ARMED</li>
+<li>慢慢放 FLAP</li>
+<li>APP 进近模式</li>
 </ul>
 </div>
 </div>

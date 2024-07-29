@@ -62,6 +62,7 @@ https://www.youtube.com/watch?v=iDOTAJVdU_A
 - NOSE --> TO
 - LAND LR --> ON
 - RWY TURN --> ON
+- 应答机 --> TA/RA
 * TAKEOFF
 - 刹住车油门 --> 50%稳定 松刹车 --> FLX/CT
 - 微微压住机头 --> 80节放平 --> V1 微微抬起
