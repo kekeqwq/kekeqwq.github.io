@@ -83,10 +83,16 @@ https://www.bilibili.com/video/BV1k8411d7jV
 - LAND ALT --> 航图 Apt Elev
 ** FMC
 计算填写 APPROACH REF，主副中控台上输入 ILS 频率，调整 COURSE
-- PANEL
-- 气压 --> STD
+** PANEL
 - AUTOBRAKE SET
 - LANDING --> ON
+- RUNWAY TURNOFF --> ON
+- TAXI --> ON
 - SPEED BREAK --> ARMED
 - 慢慢放 FLAP
 - APP 进近模式
+- 海压 SET
+- COM 2 --> ON
+- BARO SET
+- FLAP IAS SET
+- 放轮
