@@ -69,6 +69,22 @@ ref.
 https://www.youtube.com/watch?v=108sgveGUtI
 #+end_quote
 
-* TAXI
+* TAXI & TAKEOFF
 ** PANEL
 - NOSE LT --> TAXI
+- PROF - NAV
+- SPLPS --> ARM
+- NOSE LT --> LAND
+- LDG LT L R --> ON
+- RUNWAY TRUNOFF L R --> ON
+- NAV BCN --> ON
+- 应答机 --> TA/RA
+- 按住刹车油门70左右，AUTO FLIGHT 推力起飞收FLAP SPLPS关灯
+
+#+begin_quote
+ref.
+
+https://www.youtube.com/watch?v=108sgveGUtI
+#+end_quote
+
+* LANDING
