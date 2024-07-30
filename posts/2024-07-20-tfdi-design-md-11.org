@@ -12,6 +12,7 @@ ref.
 
 https://www.youtube.com/watch?v=bCgssW4LqcM
 #+end_quote
+
 * COLD & DARK START
 ** PANEL
 - BAT --> ON
@@ -42,4 +43,32 @@ https://www.youtube.com/watch?v=bCgssW4LqcM
 ** PANEL
 - 校准备用水平仪
 - 设定爬升高度、跑道航向、起始速度
-- 设定自动刹车
+- 设定自动刹车 T.O.
+* PUSHBACK & START
+*** PANEL
+- START/STOP APU --> ON
+- APU PWR --> ON
+- EMER PWR --> ARM
+- APU ON
+- EXT PWR --> OFF
+- AC 123 --> ON
+- GPU --> OFF
+- BCN --> ON
+- AUX HYD PUMP 1 --> ON
+- PUSHBACK
+- ENG IGN --> A/B
+- 3/2/1 ENGINE START
+- APU PWR --> OFF
+- START/STOP APU --> OFF
+- FLAP SET
+- TRIM SET
+  
+#+begin_quote
+ref.
+
+https://www.youtube.com/watch?v=108sgveGUtI
+#+end_quote
+
+* TAXI
+** PANEL
+- NOSE LT --> TAXI
