@@ -111,5 +111,6 @@ GW 多少 KG 减去 (FOB - EFOB) 等于 LANDING WT
 - 闪烁 ILS 的时候自动驾驶面板LS --> ON
 - 放轮
 - SPLPS --> ARM
+- APPR AP2 --> ON
 - 接近跑道时关闭自动驾驶
 - 收油门 降落 落地 反推
