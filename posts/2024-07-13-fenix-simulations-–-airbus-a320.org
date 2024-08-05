@@ -4,9 +4,13 @@
 #+filetags: flightsim
 
 Fenix Simulations A320 for Microsoft Flight Simulator
-
 #+begin_quote
-ref:
+*Information*:
+
+1.Work with 'Fenix Simulations A320' 'ToLiss Simulation A320/321/neo'(<2024-08-05 Mon>)
+#+end_quote
+#+begin_quote
+*REF*:
 
 https://www.bilibili.com/video/BV1VZ4y1t7L7
 
@@ -102,6 +106,7 @@ GW 多少 KG 减去 (FOB - EFOB) 等于 LANDING WT
 
 设定自动刹车
 #+end_quote
+- RAD NAV 'LS /FRED' 看航图左上角LOC是否一致
 - 一万英尺后调修正海压
 - LAND LR --> ON
 - RWY TURN --> ON

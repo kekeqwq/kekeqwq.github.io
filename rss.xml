@@ -4,7 +4,7 @@
 <title><![CDATA[Η Ελευθερία οδηγεί τον Λαό]]></title>
 <description><![CDATA[Η Ελευθερία οδηγεί τον Λαό]]></description>
 <link></link>
-<lastBuildDate>Sat, 03 Aug 2024 17:15:20 +0800</lastBuildDate>
+<lastBuildDate>Mon, 05 Aug 2024 23:50:15 +0800</lastBuildDate>
 <item>
   <title><![CDATA[PMDG – Boeing 737]]></title>
   <description><![CDATA[
@@ -473,34 +473,42 @@ ref.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgde9a8e5">COLD DARK START</a>
+<li><a href="#orgd0c944e">COLD DARK START</a>
 <ul>
-<li><a href="#org6ff4744">PANEL</a>
+<li><a href="#org34ac529">PANEL</a>
 <ul>
-<li><a href="#org92865ed">ATSU</a></li>
-<li><a href="#orgdf4e1be">FMGC</a></li>
-<li><a href="#org6d2eb31">PANEL</a></li>
+<li><a href="#org0d7f37e">ATSU</a></li>
+<li><a href="#orgd6d646f">FMGC</a></li>
+<li><a href="#orgb595795">PANEL</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org7c86aef">PUSHBACK &amp; TAXING</a>
+<li><a href="#org8147b37">PUSHBACK &amp; TAXING</a>
 <ul>
-<li><a href="#org838fb29">PANEL</a></li>
+<li><a href="#org71dbb66">PANEL</a></li>
 </ul>
 </li>
-<li><a href="#orge7db664">TAKEOFF</a></li>
-<li><a href="#org2d8d999">LANDING</a></li>
+<li><a href="#orge9bab0f">TAKEOFF</a></li>
+<li><a href="#org2433bbc">LANDING</a></li>
 </ul>
 </div>
 </nav>
 <p>
 Fenix Simulations A320 for Microsoft Flight Simulator
 </p>
-
 <blockquote>
 <p>
-ref:
+<b>Information</b>:
+</p>
+
+<p>
+1.Work with 'Fenix Simulations A320' 'ToLiss Simulation A320/321/neo'(<span class="timestamp-wrapper"><span class="timestamp">&lt;2024-08-05 Mon&gt;</span></span>)
+</p>
+</blockquote>
+<blockquote>
+<p>
+<b>REF</b>:
 </p>
 
 <p>
@@ -511,13 +519,13 @@ ref:
 <a href="https://www.youtube.com/watch?v=iDOTAJVdU_A">https://www.youtube.com/watch?v=iDOTAJVdU_A</a>
 </p>
 </blockquote>
-<div id="outline-container-orgde9a8e5" class="outline-2">
-<h2 id="orgde9a8e5">COLD DARK START</h2>
-<div class="outline-text-2" id="text-orgde9a8e5">
+<div id="outline-container-orgd0c944e" class="outline-2">
+<h2 id="orgd0c944e">COLD DARK START</h2>
+<div class="outline-text-2" id="text-orgd0c944e">
 </div>
-<div id="outline-container-org6ff4744" class="outline-3">
-<h3 id="org6ff4744">PANEL</h3>
-<div class="outline-text-3" id="text-org6ff4744">
+<div id="outline-container-org34ac529" class="outline-3">
+<h3 id="org34ac529">PANEL</h3>
+<div class="outline-text-3" id="text-org34ac529">
 <ul class="org-ul">
 <li>BAT 1 2 &#x2013;&gt; ON</li>
 <li>EXT PWR &#x2013;&gt; ON</li>
@@ -537,20 +545,20 @@ ref:
 </p>
 </div>
 <ul class="org-ul">
-<li><a id="org3be96bf"></a>MCDU<br></li>
+<li><a id="org3703157"></a>MCDU<br></li>
 </ul>
-<div id="outline-container-org92865ed" class="outline-4">
-<h4 id="org92865ed">ATSU</h4>
-<div class="outline-text-4" id="text-org92865ed">
+<div id="outline-container-org0d7f37e" class="outline-4">
+<h4 id="org0d7f37e">ATSU</h4>
+<div class="outline-text-4" id="text-org0d7f37e">
 <ul class="org-ul">
 <li>AOC MENU &#x2013;&gt; FLT INIT &#x2013;&gt; INIT DATA REQ</li>
 <li>AOC MENU &#x2013;&gt; WX &#x2013;&gt; WEATHER REQ &#x2013;&gt; 起飞机场 &#x2013;&gt; IDENT &#x2013;&gt; METAR &lt;Y&gt; &#x2013;&gt; SEND</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgdf4e1be" class="outline-4">
-<h4 id="orgdf4e1be">FMGC</h4>
-<div class="outline-text-4" id="text-orgdf4e1be">
+<div id="outline-container-orgd6d646f" class="outline-4">
+<h4 id="orgd6d646f">FMGC</h4>
+<div class="outline-text-4" id="text-orgd6d646f">
 <ul class="org-ul">
 <li>INIT REQUEST &#x2013;&gt; FLT NBR &#x2013;&gt; COST INDEX(CI*) &#x2013;&gt; CRZ/TEMP(FL STEPS)</li>
 <li>F-PLN &#x2013;&gt; 起飞机场 &#x2013;&gt; DEPARTURE &#x2013;&gt; INSERT &#x2013;&gt; 到达机场 &#x2013;&gt; ARRIVAL &#x2013;&gt; INSERT</li>
@@ -562,9 +570,9 @@ ref:
 </ul>
 </div>
 </div>
-<div id="outline-container-org6d2eb31" class="outline-4">
-<h4 id="org6d2eb31">PANEL</h4>
-<div class="outline-text-4" id="text-org6d2eb31">
+<div id="outline-container-orgb595795" class="outline-4">
+<h4 id="orgb595795">PANEL</h4>
+<div class="outline-text-4" id="text-orgb595795">
 <ul class="org-ul">
 <li>PUMP x6 &#x2013;&gt; ON</li>
 <li>SEAT BELTS &#x2013;&gt; ON</li>
@@ -577,9 +585,9 @@ ref:
 </div>
 </div>
 </div>
-<div id="outline-container-org7c86aef" class="outline-2">
-<h2 id="org7c86aef">PUSHBACK &amp; TAXING</h2>
-<div class="outline-text-2" id="text-org7c86aef">
+<div id="outline-container-org8147b37" class="outline-2">
+<h2 id="org8147b37">PUSHBACK &amp; TAXING</h2>
+<div class="outline-text-2" id="text-org8147b37">
 <ul class="org-ul">
 <li>ENG MODE &#x2013;&gt; IGN START</li>
 <li>ENG 2 1 &#x2013;&gt; ON</li>
@@ -593,9 +601,9 @@ ref:
 <li>SPLRS &#x2013;&gt; ARM</li>
 </ul>
 </div>
-<div id="outline-container-org838fb29" class="outline-3">
-<h3 id="org838fb29">PANEL</h3>
-<div class="outline-text-3" id="text-org838fb29">
+<div id="outline-container-org71dbb66" class="outline-3">
+<h3 id="org71dbb66">PANEL</h3>
+<div class="outline-text-3" id="text-org71dbb66">
 <ul class="org-ul">
 <li>STORBE &#x2013;&gt; ON</li>
 <li>NOSE &#x2013;&gt; TO</li>
@@ -606,9 +614,9 @@ ref:
 </div>
 </div>
 </div>
-<div id="outline-container-orge7db664" class="outline-2">
-<h2 id="orge7db664">TAKEOFF</h2>
-<div class="outline-text-2" id="text-orge7db664">
+<div id="outline-container-orge9bab0f" class="outline-2">
+<h2 id="orge9bab0f">TAKEOFF</h2>
+<div class="outline-text-2" id="text-orge9bab0f">
 <ul class="org-ul">
 <li>刹住车油门 &#x2013;&gt; 50%稳定 松刹车 &#x2013;&gt; FLX/CT</li>
 <li>微微压住机头 &#x2013;&gt; 80节放平 &#x2013;&gt; V1 微微抬起</li>
@@ -623,9 +631,9 @@ ref:
 </ul>
 </div>
 </div>
-<div id="outline-container-org2d8d999" class="outline-2">
-<h2 id="org2d8d999">LANDING</h2>
-<div class="outline-text-2" id="text-org2d8d999">
+<div id="outline-container-org2433bbc" class="outline-2">
+<h2 id="org2433bbc">LANDING</h2>
+<div class="outline-text-2" id="text-org2433bbc">
 <ul class="org-ul">
 <li>联系空管准备下降设定下降高度获取降落跑道</li>
 </ul>
@@ -680,6 +688,7 @@ GW 多少 KG 减去 (FOB - EFOB) 等于 LANDING WT
 </p>
 </blockquote>
 <ul class="org-ul">
+<li>RAD NAV 'LS /FRED' 看航图左上角LOC是否一致</li>
 <li>一万英尺后调修正海压</li>
 <li>LAND LR &#x2013;&gt; ON</li>
 <li>RWY TURN &#x2013;&gt; ON</li>
