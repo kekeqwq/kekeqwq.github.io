@@ -8,6 +8,8 @@ Fenix Simulations A320 for Microsoft Flight Simulator
 *Information*:
 
 1.Work with 'Fenix Simulations A320' 'ToLiss Simulation A320/321/neo'(<2024-08-05 Mon>)
+
+2.Work with 'ToLiss Simulation A340-600(see tips)(<2024-08-08 Thu>)
 #+end_quote
 #+begin_quote
 *REF*:
@@ -60,6 +62,9 @@ https://www.youtube.com/watch?v=iDOTAJVdU_A
 - SET CG(IPad MASS AND BLANCE 查看，FUEL PRED也要设定)
 - SET FLAPS
 - AUTO BRK --> MAX
+#+begin_quote
+A340 Tips: AUTO BRK --> T.O
+#+end_quote
 - SPLRS --> ARM
 ** PANEL
 - STORBE --> ON
@@ -67,6 +72,9 @@ https://www.youtube.com/watch?v=iDOTAJVdU_A
 - LAND LR --> ON
 - RWY TURN --> ON
 - 应答机 --> TA/RA
+#+begin_quote
+A340 Tips: + STBY --> ON
+#+end_quote
 * TAKEOFF
 - 刹住车油门 --> 50%稳定 松刹车 --> FLX/CT
 - 微微压住机头 --> 80节放平 --> V1 微微抬起
@@ -104,7 +112,7 @@ BARO 为航图中的 DA(H)
 #+begin_quote
 GW 多少 KG 减去 (FOB - EFOB) 等于 LANDING WT
 
-设定自动刹车
+设定自动刹车(A340 应调节旋钮🎛)
 #+end_quote
 - RAD NAV 'LS /FRED' 看航图左上角LOC是否一致
 - 一万英尺后调修正海压
