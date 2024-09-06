@@ -6,11 +6,43 @@
 PMDG 777-300ER for Microsoft Flight Simulator
 
 #+begin_quote
-ref:
+*ref:*
 
 https://www.bilibili.com/video/BV13H4y1w73x
 
 https://www.youtube.com/watch?v=lfPZjLHnRpg
+
+https://www.youtube.com/watch?v=20VUxP2pkmg
+#+end_quote
+
+#+begin_quote
+*FlightFactor-777Ultimate quick tips:*
+
+load simbrief
+
+weight & blance: fill simbrief
+
+cab init: hello first purser NO.3/4 call button gnd crew --> green --> end call
+
+loading page: load all
+
+pos init
+
+rte actiave ...
+
+...
+
+when all loaded cg summmary:optiize cg
+
+init.. flight
+
+perf:
+
+rw --> gr wt
+
+calc pref and use
+
+gnd crew: remove equip
 #+end_quote
 * COLD DARK START
 ** PANEL 1
