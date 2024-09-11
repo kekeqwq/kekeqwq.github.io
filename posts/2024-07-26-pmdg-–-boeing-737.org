@@ -23,7 +23,10 @@ https://www.bilibili.com/video/BV1k8411d7jV
 - WINDOW HEAT x4 --> ON
 - APU BLEED --> ON
 - L R PACK --> AUTO
+- ISOLATION --> AUTO
 - IRS L R --> NAV
+- FLT ALT --> CRS ALT
+- ALTN --> AUTO
 ** FMC
 *** POS INIT
 - REF --> 起飞机场
