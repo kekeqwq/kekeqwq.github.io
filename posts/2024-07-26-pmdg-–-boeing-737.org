@@ -42,7 +42,6 @@ https://www.bilibili.com/video/BV1k8411d7jV
 - FD x2 --> ON
 - A/T --> ARM
 - IAS --> V2
-- HEADING --> 跑道(这个应该不用手动设定)
 - 设定巡航高度
 - YAW DAMPER --> ON
 - FUEL PUMPS x4 --> ON
@@ -58,7 +57,6 @@ https://www.bilibili.com/video/BV1k8411d7jV
 - ENGINE START 2 --> GRD -- > 25% --> 2 --> IDLE
 - ENGINE START 1 --> GRD -- > 25% --> 1 --> IDLE
 - GEN 1 2 --> ON
-- APU GEN x2 --> OFF
 - PROBE x2 --> ON
 - L R PACK --> AUTO
 - APU BLEED --> OFF
