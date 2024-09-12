@@ -18,10 +18,7 @@ https://www.bilibili.com/video/BV1k8411d7jV
 - GRD PWR --> ON
 - EMER EXIT LIGHTS --> ARMED
 - SEAT BELTS --> ON
-- APU --> START
-- APU GEN x2 --> ON
 - WINDOW HEAT x4 --> ON
-- APU BLEED --> ON
 - L R PACK --> AUTO
 - ISOLATION --> AUTO
 - IRS L R --> NAV
@@ -52,6 +49,9 @@ https://www.bilibili.com/video/BV1k8411d7jV
 - ELEC 2 1 --> ON
 - FLT ALT --> 巡航高度
 - ANTI COLLISION --> ON
+- APU --> START
+- APU GEN x2 --> ON  
+- APU BLEED --> ON  
 * PUSH & START
 地面电源、门关闭 开始后推启动引擎
 - L R PACK --> OFF
