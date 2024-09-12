@@ -57,6 +57,7 @@ https://www.bilibili.com/video/BV1k8411d7jV
 - L R PACK --> OFF
 - ENGINE START 2 --> GRD -- > 25% --> 2 --> IDLE
 - ENGINE START 1 --> GRD -- > 25% --> 1 --> IDLE
+- GEN 1 2 --> ON
 - APU GEN x2 --> OFF
 - PROBE x2 --> ON
 - L R PACK --> AUTO
