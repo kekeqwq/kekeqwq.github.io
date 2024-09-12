@@ -18,6 +18,7 @@ https://www.bilibili.com/video/BV1k8411d7jV
 - EMER EXIT LIGHTS --> ARMED
 - SEAT BELTS --> ON
 - WINDOW HEAT x4 --> ON
+- TRIM AIR --> ON
 - L R PACK --> AUTO
 - ISOLATION --> AUTO
 - IRS L R --> NAV
