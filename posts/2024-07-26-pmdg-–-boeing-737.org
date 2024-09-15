@@ -98,3 +98,6 @@ https://www.bilibili.com/video/BV1k8411d7jV
 - BARO SET
 - FLAP IAS SET
 - 放轮
+* Go Around
+- TO/GA
+- To get out of APP, you have to AP disengage, FD both OFF, FD both ON select new roll and pitch mode and AP engage.
