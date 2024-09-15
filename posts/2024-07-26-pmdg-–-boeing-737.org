@@ -68,7 +68,7 @@ https://www.bilibili.com/video/BV1k8411d7jV
 ** PANEL
 - TAXI --> ON
 - VNAV --> ON
-- LNAV --> ON
+- LNAV --> ON( or "LDG SEL" mode)
 * TAKEOFF
 - 应答机 --> TA/RA
 - LANDING --> ON
