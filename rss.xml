@@ -4,7 +4,7 @@
 <title><![CDATA[Η Ελευθερία οδηγεί τον Λαό]]></title>
 <description><![CDATA[Η Ελευθερία οδηγεί τον Λαό]]></description>
 <link></link>
-<lastBuildDate>Sun, 15 Sep 2024 23:56:29 +0800</lastBuildDate>
+<lastBuildDate>Fri, 20 Sep 2024 20:28:28 +0800</lastBuildDate>
 <item>
   <title><![CDATA[PMDG – Boeing 737]]></title>
   <description><![CDATA[
@@ -12,41 +12,45 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org734febb">COLD &amp; DARK START</a>
+<li><a href="#org1276172">COLD &amp; DARK START</a>
 <ul>
-<li><a href="#orgba54c4c">PANEL</a></li>
-<li><a href="#orgecb8e2b">FMC</a>
+<li><a href="#orgbc6f40a">PANEL</a></li>
+<li><a href="#org754df7a">FMC</a>
 <ul>
-<li><a href="#orgf122633">POS INIT</a></li>
-<li><a href="#org8c1e31f">ROUTE</a></li>
-<li><a href="#orgb66c7f4">DEP ARR</a></li>
-<li><a href="#orge3cb557">PERF INIT</a></li>
+<li><a href="#orgbe977ac">POS INIT</a></li>
+<li><a href="#orgf6d482c">ROUTE</a></li>
+<li><a href="#org73f81e3">DEP ARR</a></li>
+<li><a href="#orgab2a65e">PERF INIT</a></li>
 </ul>
 </li>
-<li><a href="#org329ca2e">PANEL</a></li>
+<li><a href="#org71d51a9">PANEL</a></li>
 </ul>
 </li>
-<li><a href="#org455b087">PUSH &amp; START</a></li>
-<li><a href="#org66f9b06">TAXING</a>
+<li><a href="#orgb4387f2">PUSH &amp; START</a></li>
+<li><a href="#org25bbe6c">TAXING</a>
 <ul>
-<li><a href="#org00f3571">PANEL</a></li>
+<li><a href="#org0495149">PANEL</a></li>
 </ul>
 </li>
-<li><a href="#orgc665e44">TAKEOFF</a></li>
-<li><a href="#orgea1a6c8">LANDING</a>
+<li><a href="#org1420d78">TAKEOFF</a></li>
+<li><a href="#org02c6b27">LANDING</a>
 <ul>
-<li><a href="#org4d182c9">PANEL</a></li>
-<li><a href="#org964f8b9">FMC</a></li>
-<li><a href="#org7dd4e06">PANEL</a></li>
+<li><a href="#org815f7cc">PANEL</a></li>
+<li><a href="#orgc8259f9">FMC</a></li>
+<li><a href="#org6accacc">PANEL</a></li>
 </ul>
 </li>
-<li><a href="#org7fcf3d3">Go Around</a></li>
+<li><a href="#orga644459">Go Around</a></li>
 </ul>
 </div>
 </nav>
-<p>
-The PMDG 737 for Microsoft Flight Simulator
-</p>
+<blockquote>
+<ol class="org-ol">
+<li>now i don't like pmdg's, so the 'quick start' for zibo.<span class="timestamp-wrapper"><span class="timestamp">&lt;2024-09-20 Fri&gt;</span></span></li>
+
+<li>shoud use the 'quick start' setp by setp.<span class="timestamp-wrapper"><span class="timestamp">&lt;2024-09-20 Fri&gt;</span></span></li>
+</ol>
+</blockquote>
 
 <blockquote>
 <p>
@@ -58,13 +62,13 @@ ref.
 </p>
 </blockquote>
 
-<div id="outline-container-org734febb" class="outline-2">
-<h2 id="org734febb">COLD &amp; DARK START</h2>
-<div class="outline-text-2" id="text-org734febb">
+<div id="outline-container-org1276172" class="outline-2">
+<h2 id="org1276172">COLD &amp; DARK START</h2>
+<div class="outline-text-2" id="text-org1276172">
 </div>
-<div id="outline-container-orgba54c4c" class="outline-3">
-<h3 id="orgba54c4c">PANEL</h3>
-<div class="outline-text-3" id="text-orgba54c4c">
+<div id="outline-container-orgbc6f40a" class="outline-3">
+<h3 id="orgbc6f40a">PANEL</h3>
+<div class="outline-text-3" id="text-orgbc6f40a">
 <ul class="org-ul">
 <li>BAT &#x2013;&gt; ON</li>
 <li>GRD PWR &#x2013;&gt; ON</li>
@@ -80,38 +84,38 @@ ref.
 </ul>
 </div>
 </div>
-<div id="outline-container-orgecb8e2b" class="outline-3">
-<h3 id="orgecb8e2b">FMC</h3>
-<div class="outline-text-3" id="text-orgecb8e2b">
+<div id="outline-container-org754df7a" class="outline-3">
+<h3 id="org754df7a">FMC</h3>
+<div class="outline-text-3" id="text-org754df7a">
 </div>
-<div id="outline-container-orgf122633" class="outline-4">
-<h4 id="orgf122633">POS INIT</h4>
-<div class="outline-text-4" id="text-orgf122633">
+<div id="outline-container-orgbe977ac" class="outline-4">
+<h4 id="orgbe977ac">POS INIT</h4>
+<div class="outline-text-4" id="text-orgbe977ac">
 <ul class="org-ul">
 <li>REF &#x2013;&gt; 起飞机场</li>
 <li>GPS L &#x2013;&gt; SET IRS POS</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org8c1e31f" class="outline-4">
-<h4 id="org8c1e31f">ROUTE</h4>
-<div class="outline-text-4" id="text-org8c1e31f">
+<div id="outline-container-orgf6d482c" class="outline-4">
+<h4 id="orgf6d482c">ROUTE</h4>
+<div class="outline-text-4" id="text-orgf6d482c">
 <ul class="org-ul">
 <li>FLT PLAN &#x2013;&gt; REQUEST &#x2013;&gt; LOAD &#x2013;&gt; ACTIVATE &#x2013;&gt; EXEC</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgb66c7f4" class="outline-4">
-<h4 id="orgb66c7f4">DEP ARR</h4>
-<div class="outline-text-4" id="text-orgb66c7f4">
+<div id="outline-container-org73f81e3" class="outline-4">
+<h4 id="org73f81e3">DEP ARR</h4>
+<div class="outline-text-4" id="text-org73f81e3">
 <ul class="org-ul">
 <li>设定起降跑道</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orge3cb557" class="outline-4">
-<h4 id="orge3cb557">PERF INIT</h4>
-<div class="outline-text-4" id="text-orge3cb557">
+<div id="outline-container-orgab2a65e" class="outline-4">
+<h4 id="orgab2a65e">PERF INIT</h4>
+<div class="outline-text-4" id="text-orgab2a65e">
 <ul class="org-ul">
 <li>PERF INIT &#x2013;&gt; REQUEST &#x2013;&gt; LOAD</li>
 <li>RESERVES &#x2013;&gt; ~3</li>
@@ -121,9 +125,9 @@ ref.
 </div>
 </div>
 </div>
-<div id="outline-container-org329ca2e" class="outline-3">
-<h3 id="org329ca2e">PANEL</h3>
-<div class="outline-text-3" id="text-org329ca2e">
+<div id="outline-container-org71d51a9" class="outline-3">
+<h3 id="org71d51a9">PANEL</h3>
+<div class="outline-text-3" id="text-org71d51a9">
 <ul class="org-ul">
 <li>海压</li>
 <li>FD x2 &#x2013;&gt; ON</li>
@@ -142,9 +146,9 @@ ref.
 </div>
 </div>
 </div>
-<div id="outline-container-org455b087" class="outline-2">
-<h2 id="org455b087">PUSH &amp; START</h2>
-<div class="outline-text-2" id="text-org455b087">
+<div id="outline-container-orgb4387f2" class="outline-2">
+<h2 id="orgb4387f2">PUSH &amp; START</h2>
+<div class="outline-text-2" id="text-orgb4387f2">
 <p>
 地面电源、门关闭 开始后推启动引擎
 </p>
@@ -160,18 +164,18 @@ ref.
 </ul>
 </div>
 </div>
-<div id="outline-container-org66f9b06" class="outline-2">
-<h2 id="org66f9b06">TAXING</h2>
-<div class="outline-text-2" id="text-org66f9b06">
+<div id="outline-container-org25bbe6c" class="outline-2">
+<h2 id="org25bbe6c">TAXING</h2>
+<div class="outline-text-2" id="text-org25bbe6c">
 <ul class="org-ul">
 <li>TRIM SET</li>
 <li>FLAP SET</li>
 <li>AUTO BREAK &#x2013;&gt; RTO</li>
 </ul>
 </div>
-<div id="outline-container-org00f3571" class="outline-3">
-<h3 id="org00f3571">PANEL</h3>
-<div class="outline-text-3" id="text-org00f3571">
+<div id="outline-container-org0495149" class="outline-3">
+<h3 id="org0495149">PANEL</h3>
+<div class="outline-text-3" id="text-org0495149">
 <ul class="org-ul">
 <li>TAXI &#x2013;&gt; ON</li>
 <li>VNAV &#x2013;&gt; ON</li>
@@ -180,9 +184,9 @@ ref.
 </div>
 </div>
 </div>
-<div id="outline-container-orgc665e44" class="outline-2">
-<h2 id="orgc665e44">TAKEOFF</h2>
-<div class="outline-text-2" id="text-orgc665e44">
+<div id="outline-container-org1420d78" class="outline-2">
+<h2 id="org1420d78">TAKEOFF</h2>
+<div class="outline-text-2" id="text-org1420d78">
 <ul class="org-ul">
 <li>应答机 &#x2013;&gt; TA/RA</li>
 <li>LANDING &#x2013;&gt; ON</li>
@@ -197,29 +201,29 @@ ref.
 </ul>
 </div>
 </div>
-<div id="outline-container-orgea1a6c8" class="outline-2">
-<h2 id="orgea1a6c8">LANDING</h2>
-<div class="outline-text-2" id="text-orgea1a6c8">
+<div id="outline-container-org02c6b27" class="outline-2">
+<h2 id="org02c6b27">LANDING</h2>
+<div class="outline-text-2" id="text-org02c6b27">
 </div>
-<div id="outline-container-org4d182c9" class="outline-3">
-<h3 id="org4d182c9">PANEL</h3>
-<div class="outline-text-3" id="text-org4d182c9">
+<div id="outline-container-org815f7cc" class="outline-3">
+<h3 id="org815f7cc">PANEL</h3>
+<div class="outline-text-3" id="text-org815f7cc">
 <ul class="org-ul">
 <li>LAND ALT &#x2013;&gt; 航图 Apt Elev</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org964f8b9" class="outline-3">
-<h3 id="org964f8b9">FMC</h3>
-<div class="outline-text-3" id="text-org964f8b9">
+<div id="outline-container-orgc8259f9" class="outline-3">
+<h3 id="orgc8259f9">FMC</h3>
+<div class="outline-text-3" id="text-orgc8259f9">
 <p>
 计算填写 APPROACH REF，主副中控台上输入 ILS 频率，调整 COURSE
 </p>
 </div>
 </div>
-<div id="outline-container-org7dd4e06" class="outline-3">
-<h3 id="org7dd4e06">PANEL</h3>
-<div class="outline-text-3" id="text-org7dd4e06">
+<div id="outline-container-org6accacc" class="outline-3">
+<h3 id="org6accacc">PANEL</h3>
+<div class="outline-text-3" id="text-org6accacc">
 <ul class="org-ul">
 <li>AUTOBRAKE SET</li>
 <li>LANDING &#x2013;&gt; ON</li>
@@ -237,9 +241,9 @@ ref.
 </div>
 </div>
 </div>
-<div id="outline-container-org7fcf3d3" class="outline-2">
-<h2 id="org7fcf3d3">Go Around</h2>
-<div class="outline-text-2" id="text-org7fcf3d3">
+<div id="outline-container-orga644459" class="outline-2">
+<h2 id="orga644459">Go Around</h2>
+<div class="outline-text-2" id="text-orga644459">
 <ul class="org-ul">
 <li>TO/GA</li>
 <li>To get out of APP, you have to AP disengage, FD both OFF, FD both ON select new roll and pitch mode and AP engage.</li>
@@ -740,49 +744,51 @@ GW 多少 KG 减去 (FOB - EFOB) 等于 LANDING WT
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org2fadc54">COLD DARK START</a>
+<li><a href="#orga7dd329">COLD DARK START</a>
 <ul>
-<li><a href="#org36d2f31">PANEL 1</a></li>
-<li><a href="#orga7e56e5">CDU</a></li>
-<li><a href="#org6f3ebcf">PANEL 2</a></li>
-<li><a href="#org34d06da">FRONT PANEL</a></li>
-<li><a href="#org7d633fb">CHKL</a></li>
-<li><a href="#orgd4a576a">CDU 2</a></li>
-<li><a href="#org3f0adce">PANEL 3</a></li>
-<li><a href="#org229a146">CHKL 2</a></li>
+<li><a href="#orgb64761e">PANEL 1</a></li>
+<li><a href="#orgdcefbcc">CDU</a></li>
+<li><a href="#org200731b">PANEL 2</a></li>
+<li><a href="#org484c43e">FRONT PANEL</a></li>
+<li><a href="#org714d61b">CHKL</a></li>
+<li><a href="#orga9855d8">CDU 2</a></li>
+<li><a href="#orgc2886f0">PANEL 3</a></li>
+<li><a href="#orgd079f38">CHKL 2</a></li>
 </ul>
 </li>
-<li><a href="#orgcccbfbe">PUSHBACK/ENGINE START</a>
+<li><a href="#org217f173">PUSHBACK/ENGINE START</a>
 <ul>
-<li><a href="#org387cec9">PANEL</a></li>
+<li><a href="#org04bb393">PANEL</a></li>
 </ul>
 </li>
-<li><a href="#orgbe8283f">TAXI</a>
+<li><a href="#org3974571">TAXI</a>
 <ul>
-<li><a href="#orgaab3e01">PANEL</a></li>
-<li><a href="#org5cf5d1d">CHKL</a></li>
-<li><a href="#org7e0e820">PANEL 2</a></li>
+<li><a href="#org4a77a32">PANEL</a></li>
+<li><a href="#org8e7753b">CHKL</a></li>
+<li><a href="#org9d04ceb">PANEL 2</a></li>
 </ul>
 </li>
-<li><a href="#org61c7ea3">TAKEOFF</a>
+<li><a href="#org7ae7cb0">TAKEOFF</a>
 <ul>
-<li><a href="#org2a4852a">PANEL</a></li>
-<li><a href="#org9e6df24">CHKL</a></li>
-<li><a href="#orgd261d84">PANEL</a></li>
+<li><a href="#orge56e834">PANEL</a></li>
+<li><a href="#orgb9081ee">CHKL</a></li>
+<li><a href="#org6d9ad94">PANEL</a></li>
 </ul>
 </li>
-<li><a href="#orgfa14b4c">LANDING</a>
+<li><a href="#org4a296c2">LANDING</a>
 <ul>
-<li><a href="#orgfa1ed5d">CDU</a></li>
-<li><a href="#org9b15373">PANEL</a></li>
+<li><a href="#org8df40ea">CDU</a></li>
+<li><a href="#org79da3ea">PANEL</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </nav>
-<p>
-PMDG 777-300ER for Microsoft Flight Simulator
-</p>
+<blockquote>
+<ol class="org-ol">
+<li>now i don't like pmdg's, so the 'quick start' for flightfactor.<span class="timestamp-wrapper"><span class="timestamp">&lt;2024-09-20 Fri&gt;</span></span></li>
+</ol>
+</blockquote>
 
 <blockquote>
 <p>
@@ -859,22 +865,22 @@ calc pref and use
 gnd crew: remove equip
 </p>
 </blockquote>
-<div id="outline-container-org2fadc54" class="outline-2">
-<h2 id="org2fadc54">COLD DARK START</h2>
-<div class="outline-text-2" id="text-org2fadc54">
+<div id="outline-container-orga7dd329" class="outline-2">
+<h2 id="orga7dd329">COLD DARK START</h2>
+<div class="outline-text-2" id="text-orga7dd329">
 </div>
-<div id="outline-container-org36d2f31" class="outline-3">
-<h3 id="org36d2f31">PANEL 1</h3>
-<div class="outline-text-3" id="text-org36d2f31">
+<div id="outline-container-orgb64761e" class="outline-3">
+<h3 id="orgb64761e">PANEL 1</h3>
+<div class="outline-text-3" id="text-orgb64761e">
 <ul class="org-ul">
 <li>IPAD:呼叫地勤接通地面电源</li>
 <li>PANEL:打开 BATTERY 'PRIMARY EXT PWR' 'SECONDARY EXT PWR' 'ADIRU'</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orga7e56e5" class="outline-3">
-<h3 id="orga7e56e5">CDU</h3>
-<div class="outline-text-3" id="text-orga7e56e5">
+<div id="outline-container-orgdcefbcc" class="outline-3">
+<h3 id="orgdcefbcc">CDU</h3>
+<div class="outline-text-3" id="text-orgdcefbcc">
 <ul class="org-ul">
 <li>POS INIT: GPS POS &#x2013;&gt; SET INERTIAL POS 输入起飞机场 &#x2013;&gt; REF AIRPORT</li>
 <li>ROUTE: ROUTE REQUEST &#x2013;&gt; SIMBRIEF &#x2013;&gt; SET PAYLOAD &#x2013;&gt; SET FUEL &#x2013;&gt; SELECT RTE (Wait REQUEST SENT) &#x2013;&gt; LOAD &#x2013;&gt; ACTIVATE &#x2013;&gt; EXEC</li>
@@ -892,9 +898,9 @@ FMC COMM: DES FORECAST &#x2013;&gt; LOAD &#x2013;&gt; FORECAST REQUEST
 </ul>
 </div>
 </div>
-<div id="outline-container-org6f3ebcf" class="outline-3">
-<h3 id="org6f3ebcf">PANEL 2</h3>
-<div class="outline-text-3" id="text-org6f3ebcf">
+<div id="outline-container-org200731b" class="outline-3">
+<h3 id="org200731b">PANEL 2</h3>
+<div class="outline-text-3" id="text-org200731b">
 <ul class="org-ul">
 <li>打开 'IFE/PASS SEATS' 'CABIN UNILITY'</li>
 <li>'EMER LIGHTS' &#x2013;&gt; ARMED</li>
@@ -908,9 +914,9 @@ FMC COMM: DES FORECAST &#x2013;&gt; LOAD &#x2013;&gt; FORECAST REQUEST
 </ul>
 </div>
 </div>
-<div id="outline-container-org34d06da" class="outline-3">
-<h3 id="org34d06da">FRONT PANEL</h3>
-<div class="outline-text-3" id="text-org34d06da">
+<div id="outline-container-org484c43e" class="outline-3">
+<h3 id="org484c43e">FRONT PANEL</h3>
+<div class="outline-text-3" id="text-org484c43e">
 <ul class="org-ul">
 <li>IPad 计算起飞性能后设定修正海压</li>
 <li>EFIS 设定为 10nm TFC APRT TER 开</li>
@@ -922,18 +928,18 @@ FMC COMM: DES FORECAST &#x2013;&gt; LOAD &#x2013;&gt; FORECAST REQUEST
 </ul>
 </div>
 </div>
-<div id="outline-container-org7d633fb" class="outline-3">
-<h3 id="org7d633fb">CHKL</h3>
-<div class="outline-text-3" id="text-org7d633fb">
+<div id="outline-container-org714d61b" class="outline-3">
+<h3 id="org714d61b">CHKL</h3>
+<div class="outline-text-3" id="text-org714d61b">
 <ul class="org-ul">
 <li>Packing brake &#x2013;&gt; 捏住刹车自动感应</li>
 <li>OTHER &#x2013;&gt; ✔</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd4a576a" class="outline-3">
-<h3 id="orgd4a576a">CDU 2</h3>
-<div class="outline-text-3" id="text-orgd4a576a">
+<div id="outline-container-orga9855d8" class="outline-3">
+<h3 id="orga9855d8">CDU 2</h3>
+<div class="outline-text-3" id="text-orga9855d8">
 <p>
 INIT REF
 </p>
@@ -945,9 +951,9 @@ INIT REF
 </ul>
 </div>
 </div>
-<div id="outline-container-org3f0adce" class="outline-3">
-<h3 id="org3f0adce">PANEL 3</h3>
-<div class="outline-text-3" id="text-org3f0adce">
+<div id="outline-container-orgc2886f0" class="outline-3">
+<h3 id="orgc2886f0">PANEL 3</h3>
+<div class="outline-text-3" id="text-orgc2886f0">
 <ul class="org-ul">
 <li>APU &#x2013;&gt; 长按到 START 然后会自动回跳到 ON 稍等确认提示 APU RUNNING</li>
 <li>关门</li>
@@ -961,25 +967,25 @@ INIT REF
 </ul>
 </div>
 </div>
-<div id="outline-container-org229a146" class="outline-3">
-<h3 id="org229a146">CHKL 2</h3>
-<div class="outline-text-3" id="text-org229a146">
+<div id="outline-container-orgd079f38" class="outline-3">
+<h3 id="orgd079f38">CHKL 2</h3>
+<div class="outline-text-3" id="text-orgd079f38">
 <p>
 这时候可以全选
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-orgcccbfbe" class="outline-2">
-<h2 id="orgcccbfbe">PUSHBACK/ENGINE START</h2>
-<div class="outline-text-2" id="text-orgcccbfbe">
+<div id="outline-container-org217f173" class="outline-2">
+<h2 id="org217f173">PUSHBACK/ENGINE START</h2>
+<div class="outline-text-2" id="text-org217f173">
 <p>
 Ipad: Wheel Chocks Remove
 </p>
 </div>
-<div id="outline-container-org387cec9" class="outline-3">
-<h3 id="org387cec9">PANEL</h3>
-<div class="outline-text-3" id="text-org387cec9">
+<div id="outline-container-org04bb393" class="outline-3">
+<h3 id="org04bb393">PANEL</h3>
+<div class="outline-text-3" id="text-org04bb393">
 <ul class="org-ul">
 <li>START L ENGINE &#x2013;&gt; START L FUEL CONTROL &#x2013;&gt; RUN</li>
 <li>START R ENGINE &#x2013;&gt; START R FUEL CONTROL &#x2013;&gt; RUN</li>
@@ -987,16 +993,16 @@ Ipad: Wheel Chocks Remove
 </div>
 </div>
 </div>
-<div id="outline-container-orgbe8283f" class="outline-2">
-<h2 id="orgbe8283f">TAXI</h2>
-<div class="outline-text-2" id="text-orgbe8283f">
+<div id="outline-container-org3974571" class="outline-2">
+<h2 id="org3974571">TAXI</h2>
+<div class="outline-text-2" id="text-org3974571">
 <p>
 FLAP &#x2013;&gt; 5
 </p>
 </div>
-<div id="outline-container-orgaab3e01" class="outline-3">
-<h3 id="orgaab3e01">PANEL</h3>
-<div class="outline-text-3" id="text-orgaab3e01">
+<div id="outline-container-org4a77a32" class="outline-3">
+<h3 id="org4a77a32">PANEL</h3>
+<div class="outline-text-3" id="text-org4a77a32">
 <ul class="org-ul">
 <li>APU &#x2013;&gt; OFF</li>
 </ul>
@@ -1005,30 +1011,30 @@ FLAP &#x2013;&gt; 5
 </p>
 </div>
 </div>
-<div id="outline-container-org5cf5d1d" class="outline-3">
-<h3 id="org5cf5d1d">CHKL</h3>
-<div class="outline-text-3" id="text-org5cf5d1d">
+<div id="outline-container-org8e7753b" class="outline-3">
+<h3 id="org8e7753b">CHKL</h3>
+<div class="outline-text-3" id="text-org8e7753b">
 <p>
 全选
 </p>
 </div>
 </div>
-<div id="outline-container-org7e0e820" class="outline-3">
-<h3 id="org7e0e820">PANEL 2</h3>
-<div class="outline-text-3" id="text-org7e0e820">
+<div id="outline-container-org9d04ceb" class="outline-3">
+<h3 id="org9d04ceb">PANEL 2</h3>
+<div class="outline-text-3" id="text-org9d04ceb">
 <ul class="org-ul">
 <li>TAXI LIGHT &#x2013;&gt; ON</li>
 </ul>
 </div>
 </div>
 </div>
-<div id="outline-container-org61c7ea3" class="outline-2">
-<h2 id="org61c7ea3">TAKEOFF</h2>
-<div class="outline-text-2" id="text-org61c7ea3">
+<div id="outline-container-org7ae7cb0" class="outline-2">
+<h2 id="org7ae7cb0">TAKEOFF</h2>
+<div class="outline-text-2" id="text-org7ae7cb0">
 </div>
-<div id="outline-container-org2a4852a" class="outline-3">
-<h3 id="org2a4852a">PANEL</h3>
-<div class="outline-text-3" id="text-org2a4852a">
+<div id="outline-container-orge56e834" class="outline-3">
+<h3 id="orge56e834">PANEL</h3>
+<div class="outline-text-3" id="text-orge56e834">
 <ul class="org-ul">
 <li>LANDINT LIGNT &#x2013;&gt; ON x3</li>
 <li>RUNWAY TRUNOFF LIGHT&#x2013;&gt; ON L R</li>
@@ -1040,17 +1046,17 @@ FLAP &#x2013;&gt; 5
 </p>
 </div>
 </div>
-<div id="outline-container-org9e6df24" class="outline-3">
-<h3 id="org9e6df24">CHKL</h3>
-<div class="outline-text-3" id="text-org9e6df24">
+<div id="outline-container-orgb9081ee" class="outline-3">
+<h3 id="orgb9081ee">CHKL</h3>
+<div class="outline-text-3" id="text-orgb9081ee">
 <p>
 完成
 </p>
 </div>
 </div>
-<div id="outline-container-orgd261d84" class="outline-3">
-<h3 id="orgd261d84">PANEL</h3>
-<div class="outline-text-3" id="text-orgd261d84">
+<div id="outline-container-org6d9ad94" class="outline-3">
+<h3 id="org6d9ad94">PANEL</h3>
+<div class="outline-text-3" id="text-org6d9ad94">
 <p>
 到达一万英尺时，修正海压 &#x2013;&gt; STD
 </p>
@@ -1064,16 +1070,16 @@ FLAP &#x2013;&gt; 5
 </div>
 </div>
 </div>
-<div id="outline-container-orgfa14b4c" class="outline-2">
-<h2 id="orgfa14b4c">LANDING</h2>
-<div class="outline-text-2" id="text-orgfa14b4c">
+<div id="outline-container-org4a296c2" class="outline-2">
+<h2 id="org4a296c2">LANDING</h2>
+<div class="outline-text-2" id="text-org4a296c2">
 <ul class="org-ul">
 <li>MAP: T/D &#x2013;&gt; ALTITLDE &#x2013;&gt; 起始进近高度</li>
 </ul>
 </div>
-<div id="outline-container-orgfa1ed5d" class="outline-3">
-<h3 id="orgfa1ed5d">CDU</h3>
-<div class="outline-text-3" id="text-orgfa1ed5d">
+<div id="outline-container-org8df40ea" class="outline-3">
+<h3 id="org8df40ea">CDU</h3>
+<div class="outline-text-3" id="text-org8df40ea">
 <ul class="org-ul">
 <li>IPad: 计算 Landing Enroute</li>
 <li>APPROACH REF 按需选择 GROSS WT（iPad 计算:Weight） FLAP/SPEED（粘贴） AUTOBREAK（设定）</li>
@@ -1085,9 +1091,9 @@ FLAP &#x2013;&gt; 5
 </ul>
 </div>
 </div>
-<div id="outline-container-org9b15373" class="outline-3">
-<h3 id="org9b15373">PANEL</h3>
-<div class="outline-text-3" id="text-org9b15373">
+<div id="outline-container-org79da3ea" class="outline-3">
+<h3 id="org79da3ea">PANEL</h3>
+<div class="outline-text-3" id="text-org79da3ea">
 <p>
 一万英尺后
 </p>

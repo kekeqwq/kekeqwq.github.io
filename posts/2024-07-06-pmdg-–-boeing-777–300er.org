@@ -3,7 +3,9 @@
 #+description: pmdg 777 quickstart
 #+filetags: flightsim
 
-PMDG 777-300ER for Microsoft Flight Simulator
+#+begin_quote
+1. now i don't like pmdg's, so the 'quick start' for flightfactor.<2024-09-20 Fri>
+#+end_quote
 
 #+begin_quote
 *ref:*
