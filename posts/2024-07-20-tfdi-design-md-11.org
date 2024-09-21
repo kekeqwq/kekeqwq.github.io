@@ -3,14 +3,10 @@
 #+description: MD-11 quickstart
 #+filetags: flightsim
 
-TFDi Design MD-11 for Microsoft Flight Simulator
-
 * TODO WORK IN PROGRESS
-
+* Reference
 #+begin_quote
-ref.
-
-https://www.youtube.com/watch?v=bCgssW4LqcM
+1. https://www.youtube.com/watch?v=bCgssW4LqcM
 #+end_quote
 
 * COLD & DARK START
@@ -64,9 +60,7 @@ https://www.youtube.com/watch?v=bCgssW4LqcM
 - TRIM SET
   
 #+begin_quote
-ref.
-
-https://www.youtube.com/watch?v=108sgveGUtI
++ https://www.youtube.com/watch?v=108sgveGUtI
 #+end_quote
 
 * TAXI & TAKEOFF
@@ -82,9 +76,7 @@ https://www.youtube.com/watch?v=108sgveGUtI
 - 按住刹车油门70左右，AUTO FLIGHT 推力起飞收FLAP SPLPS关灯
 
 #+begin_quote
-ref.
-
-https://www.youtube.com/watch?v=108sgveGUtI
++ https://www.youtube.com/watch?v=108sgveGUtI
 #+end_quote
 
 * LANDING

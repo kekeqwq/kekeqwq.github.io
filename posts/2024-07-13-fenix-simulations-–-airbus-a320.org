@@ -2,21 +2,17 @@
 #+date: <2024-07-13 20:52>
 #+description: fenix a320 quick start
 #+filetags: flightsim
-
-Fenix Simulations A320 for Microsoft Flight Simulator
+* Messages
 #+begin_quote
-*Information*:
+1. Work with 'Fenix Simulations A320' 'ToLiss Simulation A320/321/neo'(<2024-08-05 Mon>)
 
-1.Work with 'Fenix Simulations A320' 'ToLiss Simulation A320/321/neo'(<2024-08-05 Mon>)
-
-2.Work with 'ToLiss Simulation A340-600(see tips)(<2024-08-08 Thu>)
+2. Work with 'ToLiss Simulation A340-600(see tips)(<2024-08-08 Thu>)
 #+end_quote
+* Reference
 #+begin_quote
-*REF*:
+1. https://www.bilibili.com/video/BV1VZ4y1t7L7
 
-https://www.bilibili.com/video/BV1VZ4y1t7L7
-
-https://www.youtube.com/watch?v=iDOTAJVdU_A
+2. https://www.youtube.com/watch?v=iDOTAJVdU_A
 #+end_quote
 * COLD DARK START
 ** PANEL

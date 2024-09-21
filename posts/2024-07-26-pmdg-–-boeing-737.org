@@ -2,19 +2,16 @@
 #+date: <2024-07-26 23:51>
 #+description: 737 quick start
 #+filetags: flightsim
-
+* Messages
 #+begin_quote
 1. now i don't like pmdg's, so the 'quick start' for zibo.<2024-09-20 Fri>
 
 2. shoud use the 'quick start' setp by setp.<2024-09-20 Fri>
 #+end_quote
-
+* Reference
 #+begin_quote
-ref.
-
-https://www.bilibili.com/video/BV1k8411d7jV
+1. https://www.bilibili.com/video/BV1k8411d7jV
 #+end_quote
-
 * COLD & DARK START
 ** PANEL
 - BAT --> ON

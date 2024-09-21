@@ -2,23 +2,10 @@
 #+date: <2024-07-06 18:31>
 #+description: pmdg 777 quickstart
 #+filetags: flightsim
-
+* Messages
 #+begin_quote
 1. now i don't like pmdg's, so the 'quick start' for flightfactor.<2024-09-20 Fri>
-#+end_quote
-
-#+begin_quote
-*ref:*
-
-https://www.bilibili.com/video/BV13H4y1w73x
-
-https://www.youtube.com/watch?v=lfPZjLHnRpg
-
-https://www.youtube.com/watch?v=K2s-1tY2ZOc
-#+end_quote
-
-#+begin_quote
-*FlightFactor-777Ultimate quick tips:*
+2. *FlightFactor-777Ultimate quick tips:*
 
 load simbrief
 
@@ -44,7 +31,15 @@ rw --> gr wt
 
 calc pref and use
 
-gnd crew: remove equip
+gnd crew: remove equip <2024-09-21 Sat>
+#+end_quote
+* Reference
+#+begin_quote
+1. https://www.bilibili.com/video/BV13H4y1w73x
+
+2. https://www.youtube.com/watch?v=lfPZjLHnRpg
+
+3. https://www.youtube.com/watch?v=K2s-1tY2ZOc
 #+end_quote
 * COLD DARK START
 ** PANEL 1
