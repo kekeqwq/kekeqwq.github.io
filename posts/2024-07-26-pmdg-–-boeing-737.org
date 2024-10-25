@@ -7,6 +7,8 @@
 1. now i don't like pmdg's, so the 'quick start' for zibo.<2024-09-20 Fri>
 
 2. shoud use the 'quick start' step by step.<2024-09-20 Fri>
+
+3. ifly 737 max 起飞后需要多带会机头，不要过早让ap接管.<2024-10-25 Fri>
 #+end_quote
 * Reference
 #+begin_quote
@@ -45,7 +47,7 @@
 - IAS --> V2
 - 设定巡航高度
 - YAW DAMPER --> ON
-- FUEL PUMPS x4 --> ON
+- FUEL PUMPS x4 --> ON 远航则需要打开中央油箱
 - ELEC 2 1 --> ON
 - FLT ALT --> 巡航高度
 - ANTI COLLISION --> ON
