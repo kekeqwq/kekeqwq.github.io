@@ -7,6 +7,15 @@
 1. Work with 'Fenix Simulations A320' 'ToLiss Simulation A320/321/neo'(<2024-08-05 Mon>)
 
 2. Work with 'ToLiss Simulation A340-600(see tips)(<2024-08-08 Thu>)
+
+3. Flybywire A380X:
+
+   FD --> ON
+
+   SURV: XPDR --> AUTO TCAS --> TA/RA
+   <2024-11-02 Sat>
+
+4. A380 目前的进近下高不准确，需要用 V/S 模式手动调整<2024-11-04 Mon>
 #+end_quote
 * Reference
 #+begin_quote
